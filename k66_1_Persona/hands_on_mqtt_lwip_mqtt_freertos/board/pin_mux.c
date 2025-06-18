@@ -156,6 +156,47 @@ void BOARD_InitPins(void)
     /* PORTE26 (pin K4) is configured as ENET_1588_CLKIN */
     PORT_SetPinMux(PORTE, 26U, kPORT_MuxAlt2);
 
+
+    const port_pin_config_t portb2_pinG12_config = {/* Internal pull-up resistor is enabled */
+                                                    kPORT_PullUp,
+                                                    /* Fast slew rate is configured */
+                                                    kPORT_FastSlewRate,
+                                                    /* Passive filter is disabled */
+                                                    kPORT_PassiveFilterDisable,
+                                                    /* Open drain is enabled */
+                                                    kPORT_OpenDrainEnable,
+                                                    /* Low drive strength is configured */
+                                                    kPORT_LowDriveStrength,
+                                                    /* Pin is configured as I2C0_SCL */
+                                                    kPORT_MuxAlt7,
+                                                    /* Pin Control Register fields [15:0] are not locked */
+                                                    kPORT_UnlockRegister};
+    /* PORTB2 (pin G12) is configured as I2C0_SCL */
+    //PORT_SetPinConfig(PORTB, 2U, &portb2_pinG12_config);
+
+    /* PORTD2 (pin C4) is configured as I2C0_SCL */
+    PORT_SetPinConfig(PORTD, 2U, &portb2_pinG12_config);
+
+    const port_pin_config_t portb3_pinG11_config = {/* Internal pull-up resistor is enabled */
+                                                    kPORT_PullUp,
+                                                    /* Fast slew rate is configured */
+                                                    kPORT_FastSlewRate,
+                                                    /* Passive filter is disabled */
+                                                    kPORT_PassiveFilterDisable,
+                                                    /* Open drain is enabled */
+                                                    kPORT_OpenDrainEnable,
+                                                    /* Low drive strength is configured */
+                                                    kPORT_LowDriveStrength,
+                                                    /* Pin is configured as I2C0_SDA */
+                                                    kPORT_MuxAlt7,
+                                                    /* Pin Control Register fields [15:0] are not locked */
+                                                    kPORT_UnlockRegister};
+    /* PORTB3 (pin G11) is configured as I2C0_SDA */
+//    PORT_SetPinConfig(PORTB, 3U, &portb3_pinG11_config);
+
+    /* PORTD3 (pin B4) is configured as I2C0_SDA */
+     PORT_SetPinConfig(PORTD, 3U, &portb3_pinG11_config);
+
     SIM->SOPT5 = ((SIM->SOPT5 &
                    /* Mask bits to zero which are setting */
                    (~(SIM_SOPT5_UART0TXSRC_MASK)))

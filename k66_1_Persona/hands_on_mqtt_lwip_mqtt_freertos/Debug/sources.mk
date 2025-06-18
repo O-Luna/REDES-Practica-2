@@ -34,6 +34,7 @@ lwip/src/netif/ppp \
 mdio \
 phy \
 source/drivers/gpio \
+source/drivers/i2c \
 source \
 startup \
 utilities \

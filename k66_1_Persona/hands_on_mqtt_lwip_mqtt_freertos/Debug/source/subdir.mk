@@ -4,18 +4,18 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
-../source/lwip_mqtt_freertos.c \
 ../source/lwip_mqtt_id_sim.c \
+../source/main.c \
 ../source/semihost_hardfault.c 
 
 C_DEPS += \
-./source/lwip_mqtt_freertos.d \
 ./source/lwip_mqtt_id_sim.d \
+./source/main.d \
 ./source/semihost_hardfault.d 
 
 OBJS += \
-./source/lwip_mqtt_freertos.o \
 ./source/lwip_mqtt_id_sim.o \
+./source/main.o \
 ./source/semihost_hardfault.o 
 
 
@@ -31,7 +31,7 @@ source/%.o: ../source/%.c source/subdir.mk
 clean: clean-source
 
 clean-source:
-	-$(RM) ./source/lwip_mqtt_freertos.d ./source/lwip_mqtt_freertos.o ./source/lwip_mqtt_id_sim.d ./source/lwip_mqtt_id_sim.o ./source/semihost_hardfault.d ./source/semihost_hardfault.o
+	-$(RM) ./source/lwip_mqtt_id_sim.d ./source/lwip_mqtt_id_sim.o ./source/main.d ./source/main.o ./source/semihost_hardfault.d ./source/semihost_hardfault.o
 
 .PHONY: clean-source
 

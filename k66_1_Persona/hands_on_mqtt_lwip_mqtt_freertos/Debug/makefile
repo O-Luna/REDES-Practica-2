@@ -10,6 +10,7 @@ RM := rm -rf
 -include sources.mk
 -include utilities/subdir.mk
 -include startup/subdir.mk
+-include source/drivers/i2c/subdir.mk
 -include source/drivers/gpio/subdir.mk
 -include source/subdir.mk
 -include phy/subdir.mk
