@@ -148,7 +148,7 @@ static void mqtt_incoming_data_cb(void *arg, const u8_t *data, u16_t len, u8_t f
  */
 static void mqtt_subscribe_topics(mqtt_client_t *client)
 {
-    static const char *topics[] = {"lwip_topic/#", "lwip_other/#"};
+    static const char *topics[] = {"hoa/#};
     int qos[]                   = {0, 1};
     err_t err;
     int i;
@@ -250,10 +250,22 @@ static void mqtt_message_published_cb(void *arg, err_t err)
 /*!
  * @brief Publishes a message. To be called on tcpip_thread.
  */
-static void publish_message(void *ctx)
+static void publish_movement(void *ctx)
 {
-    static const char *topic   = "lwip_topic/100";
-    static const char *message = "message from board";
+    static const char *topic   = "hoa/casa/movimiento";
+    static const char *message = "nadie";
+
+    LWIP_UNUSED_ARG(ctx);
+
+    PRINTF("Going to publish to the topic \"%s\"...\r\n", topic);
+
+    mqtt_publish(mqtt_client, topic, message, strlen(message), 1, 0, mqtt_message_published_cb, (void *)topic);
+}
+
+static void publish_smoke(void *ctx)
+{
+    static const char *topic   = "hoa/casa/humo";
+    static const char *message = "0";
 
     LWIP_UNUSED_ARG(ctx);
 
@@ -269,6 +281,7 @@ static void app_thread(void *arg)
 {
     struct netif *netif = (struct netif *)arg;
     err_t err;
+    err_t err2;
     int i;
 
     PRINTF("\r\nIPv4 Address     : %s\r\n", ipaddr_ntoa(&netif->ip_addr));
@@ -311,8 +324,13 @@ static void app_thread(void *arg)
     {
         if (connected)
         {
-            err = tcpip_callback(publish_message, NULL);
+            err = tcpip_callback(publish_movement, NULL);
             if (err != ERR_OK)
+            {
+                PRINTF("Failed to invoke publishing of a message on the tcpip_thread: %d.\r\n", err);
+            }
+            err2 = tcpip_callback(publish_smoke, NULL);
+            if (err2 != ERR_OK)
             {
                 PRINTF("Failed to invoke publishing of a message on the tcpip_thread: %d.\r\n", err);
             }
