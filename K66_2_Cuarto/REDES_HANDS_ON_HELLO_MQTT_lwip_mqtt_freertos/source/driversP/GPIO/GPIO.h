@@ -10,6 +10,8 @@
 #include "pin_mux.h"
 #include "clock_config.h"
 #include "fsl_debug_console.h"
+#include "driversP/UART/uart_d.h"
+#include "driversP/mqtt/mqtt.h"
 
 #define PUBLISH_THREAD_STACKSIZE 1024
 
@@ -17,10 +19,3 @@
 #define PUBLISH_THREAD_PRIO DEFAULT_THREAD_PRIO
 
 void button_driver_init(void);
-
-
-typedef struct {
-	const char *topic;
-	const char *message;
-} mqtt_args_t;
-

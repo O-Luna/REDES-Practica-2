@@ -395,6 +395,9 @@ Discarded input sections
  .group         0x00000000        0xc ./source/driversP/mqtt/matt.o
  .group         0x00000000        0xc ./source/driversP/mqtt/matt.o
  .group         0x00000000        0xc ./source/driversP/mqtt/matt.o
+ .group         0x00000000        0xc ./source/driversP/mqtt/matt.o
+ .group         0x00000000        0xc ./source/driversP/mqtt/matt.o
+ .group         0x00000000        0xc ./source/driversP/mqtt/matt.o
  .text          0x00000000        0x0 ./source/driversP/mqtt/matt.o
  .data          0x00000000        0x0 ./source/driversP/mqtt/matt.o
  .bss           0x00000000        0x0 ./source/driversP/mqtt/matt.o
@@ -642,8 +645,14 @@ Discarded input sections
  .debug_macro   0x00000000       0x10 ./source/driversP/UART/uart_d.o
  .debug_macro   0x00000000       0xd2 ./source/driversP/UART/uart_d.o
  .debug_macro   0x00000000       0xd1 ./source/driversP/UART/uart_d.o
+ .debug_macro   0x00000000       0x10 ./source/driversP/UART/uart_d.o
  .debug_macro   0x00000000       0x4c ./source/driversP/UART/uart_d.o
  .debug_macro   0x00000000       0x10 ./source/driversP/UART/uart_d.o
+ .debug_macro   0x00000000       0x16 ./source/driversP/UART/uart_d.o
+ .debug_macro   0x00000000       0x10 ./source/driversP/UART/uart_d.o
+ .group         0x00000000        0xc ./source/driversP/GPIO/GPIO.o
+ .group         0x00000000        0xc ./source/driversP/GPIO/GPIO.o
+ .group         0x00000000        0xc ./source/driversP/GPIO/GPIO.o
  .group         0x00000000        0xc ./source/driversP/GPIO/GPIO.o
  .group         0x00000000        0xc ./source/driversP/GPIO/GPIO.o
  .group         0x00000000        0xc ./source/driversP/GPIO/GPIO.o
@@ -755,14 +764,10 @@ Discarded input sections
  .rodata.mqtt_client_info
                 0x00000000       0x1c ./source/driversP/GPIO/GPIO.o
  .debug_macro   0x00000000      0xb38 ./source/driversP/GPIO/GPIO.o
- .debug_macro   0x00000000       0x34 ./source/driversP/GPIO/GPIO.o
- .debug_macro   0x00000000      0x1aa ./source/driversP/GPIO/GPIO.o
- .debug_macro   0x00000000       0x16 ./source/driversP/GPIO/GPIO.o
- .debug_macro   0x00000000       0x34 ./source/driversP/GPIO/GPIO.o
  .debug_macro   0x00000000       0x10 ./source/driversP/GPIO/GPIO.o
- .debug_macro   0x00000000       0x1c ./source/driversP/GPIO/GPIO.o
- .debug_macro   0x00000000       0x22 ./source/driversP/GPIO/GPIO.o
  .debug_macro   0x00000000      0x12e ./source/driversP/GPIO/GPIO.o
+ .debug_macro   0x00000000       0x16 ./source/driversP/GPIO/GPIO.o
+ .debug_macro   0x00000000       0x22 ./source/driversP/GPIO/GPIO.o
  .debug_macro   0x00000000      0x5b3 ./source/driversP/GPIO/GPIO.o
  .debug_macro   0x00000000       0x22 ./source/driversP/GPIO/GPIO.o
  .debug_macro   0x00000000       0x10 ./source/driversP/GPIO/GPIO.o
@@ -777,6 +782,9 @@ Discarded input sections
  .debug_macro   0x00000000       0x7a ./source/driversP/GPIO/GPIO.o
  .debug_macro   0x00000000       0xaf ./source/driversP/GPIO/GPIO.o
  .debug_macro   0x00000000      0x190 ./source/driversP/GPIO/GPIO.o
+ .debug_macro   0x00000000       0x16 ./source/driversP/GPIO/GPIO.o
+ .debug_macro   0x00000000       0x16 ./source/driversP/GPIO/GPIO.o
+ .debug_macro   0x00000000       0x34 ./source/driversP/GPIO/GPIO.o
  .debug_macro   0x00000000       0x70 ./source/driversP/GPIO/GPIO.o
  .debug_macro   0x00000000      0x192 ./source/driversP/GPIO/GPIO.o
  .debug_macro   0x00000000      0x15a ./source/driversP/GPIO/GPIO.o
@@ -790,6 +798,10 @@ Discarded input sections
  .debug_macro   0x00000000       0x16 ./source/driversP/GPIO/GPIO.o
  .debug_macro   0x00000000       0x1c ./source/driversP/GPIO/GPIO.o
  .debug_macro   0x00000000       0x1c ./source/driversP/GPIO/GPIO.o
+ .debug_macro   0x00000000       0x34 ./source/driversP/GPIO/GPIO.o
+ .debug_macro   0x00000000      0x1aa ./source/driversP/GPIO/GPIO.o
+ .debug_macro   0x00000000       0x16 ./source/driversP/GPIO/GPIO.o
+ .debug_macro   0x00000000       0x34 ./source/driversP/GPIO/GPIO.o
  .debug_macro   0x00000000       0xb5 ./source/driversP/GPIO/GPIO.o
  .debug_macro   0x00000000      0x120 ./source/driversP/GPIO/GPIO.o
  .debug_macro   0x00000000       0x80 ./source/driversP/GPIO/GPIO.o
@@ -803,11 +815,6 @@ Discarded input sections
  .debug_macro   0x00000000       0x82 ./source/driversP/GPIO/GPIO.o
  .debug_macro   0x00000000       0x73 ./source/driversP/GPIO/GPIO.o
  .debug_macro   0x00000000      0x6fb ./source/driversP/GPIO/GPIO.o
- .debug_macro   0x00000000       0x34 ./source/driversP/GPIO/GPIO.o
- .debug_macro   0x00000000       0x22 ./source/driversP/GPIO/GPIO.o
- .debug_macro   0x00000000       0x16 ./source/driversP/GPIO/GPIO.o
- .debug_macro   0x00000000       0x16 ./source/driversP/GPIO/GPIO.o
- .debug_macro   0x00000000      0x243 ./source/driversP/GPIO/GPIO.o
  .debug_macro   0x00000000       0xb8 ./source/driversP/GPIO/GPIO.o
  .debug_macro   0x00000000       0xb3 ./source/driversP/GPIO/GPIO.o
  .debug_macro   0x00000000       0x6a ./source/driversP/GPIO/GPIO.o
@@ -847,9 +854,11 @@ Discarded input sections
  .debug_macro   0x00000000       0x10 ./source/driversP/GPIO/GPIO.o
  .debug_macro   0x00000000       0x34 ./source/driversP/GPIO/GPIO.o
  .debug_macro   0x00000000       0x10 ./source/driversP/GPIO/GPIO.o
- .debug_macro   0x00000000       0xd2 ./source/driversP/GPIO/GPIO.o
  .debug_macro   0x00000000       0xd1 ./source/driversP/GPIO/GPIO.o
+ .debug_macro   0x00000000       0x10 ./source/driversP/GPIO/GPIO.o
  .debug_macro   0x00000000       0x4c ./source/driversP/GPIO/GPIO.o
+ .debug_macro   0x00000000       0x10 ./source/driversP/GPIO/GPIO.o
+ .debug_macro   0x00000000       0x16 ./source/driversP/GPIO/GPIO.o
  .debug_macro   0x00000000       0x10 ./source/driversP/GPIO/GPIO.o
  .group         0x00000000        0xc ./source/lwip_mqtt_id_sim.o
  .group         0x00000000        0xc ./source/lwip_mqtt_id_sim.o
@@ -892,6 +901,8 @@ Discarded input sections
  .debug_macro   0x00000000       0x7a ./source/lwip_mqtt_id_sim.o
  .debug_macro   0x00000000       0xaf ./source/lwip_mqtt_id_sim.o
  .debug_macro   0x00000000      0x190 ./source/lwip_mqtt_id_sim.o
+ .group         0x00000000        0xc ./source/main.o
+ .group         0x00000000        0xc ./source/main.o
  .group         0x00000000        0xc ./source/main.o
  .group         0x00000000        0xc ./source/main.o
  .group         0x00000000        0xc ./source/main.o
@@ -1098,9 +1109,11 @@ Discarded input sections
  .debug_macro   0x00000000       0x10 ./source/main.o
  .debug_macro   0x00000000       0xd2 ./source/main.o
  .debug_macro   0x00000000       0xd1 ./source/main.o
- .debug_macro   0x00000000       0x4c ./source/main.o
+ .debug_macro   0x00000000       0x10 ./source/main.o
  .debug_macro   0x00000000       0x10 ./source/main.o
  .debug_macro   0x00000000       0x16 ./source/main.o
+ .debug_macro   0x00000000       0x10 ./source/main.o
+ .debug_macro   0x00000000       0x4c ./source/main.o
  .group         0x00000000        0xc ./source/semihost_hardfault.o
  .text          0x00000000        0x0 ./source/semihost_hardfault.o
  .data          0x00000000        0x0 ./source/semihost_hardfault.o
@@ -14547,8 +14560,10 @@ Discarded input sections
  .debug_macro   0x00000000       0x7a ./board/board.o
  .debug_macro   0x00000000       0xaf ./board/board.o
  .debug_macro   0x00000000      0x190 ./board/board.o
+ .debug_macro   0x00000000       0x1c ./board/board.o
  .debug_macro   0x00000000       0x16 ./board/board.o
  .debug_macro   0x00000000       0x16 ./board/board.o
+ .debug_macro   0x00000000      0x24f ./board/board.o
  .debug_macro   0x00000000       0x70 ./board/board.o
  .debug_macro   0x00000000      0x192 ./board/board.o
  .debug_macro   0x00000000      0x15a ./board/board.o
@@ -19071,7 +19086,7 @@ LOAD linker stubs
  .debug_ranges  0x00002d00       0x10 C:/nxp/MCUXpressoIDE_11.10.0_3148/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.10.0.202311280810/tools/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libcr_nohost_nf.a(__sys_tmpnam.o)
  .debug_ranges  0x00002d10       0x10 C:/nxp/MCUXpressoIDE_11.10.0_3148/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.10.0.202311280810/tools/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libcr_nohost_nf.a(__sys_write.o)
 
-.debug_macro    0x00000000    0x29957
+.debug_macro    0x00000000    0x29af5
  .debug_macro   0x00000000      0x1a2 ./utilities/fsl_assert.o
  .debug_macro   0x000001a2      0xb38 ./utilities/fsl_assert.o
  .debug_macro   0x00000cda       0x10 ./utilities/fsl_assert.o
@@ -19123,269 +19138,270 @@ LOAD linker stubs
  .debug_macro   0x0001b1e1      0x1c7 ./utilities/fsl_str.o
  .debug_macro   0x0001b3a8       0x4f ./utilities/fsl_str.o
  .debug_macro   0x0001b3f7       0x29 ./startup/startup_mk66f18.o
- .debug_macro   0x0001b420      0x53e ./source/driversP/mqtt/matt.o
- .debug_macro   0x0001b95e       0x34 ./source/driversP/mqtt/matt.o
- .debug_macro   0x0001b992      0x1aa ./source/driversP/mqtt/matt.o
- .debug_macro   0x0001bb3c       0x16 ./source/driversP/mqtt/matt.o
- .debug_macro   0x0001bb52       0x34 ./source/driversP/mqtt/matt.o
- .debug_macro   0x0001bb86       0x2e ./source/driversP/mqtt/matt.o
- .debug_macro   0x0001bbb4       0x10 ./source/driversP/mqtt/matt.o
- .debug_macro   0x0001bbc4       0x1d ./source/driversP/mqtt/matt.o
- .debug_macro   0x0001bbe1       0x7c ./source/driversP/mqtt/matt.o
- .debug_macro   0x0001bc5d       0x19 ./source/driversP/mqtt/matt.o
- .debug_macro   0x0001bc76       0x7c ./source/driversP/mqtt/matt.o
- .debug_macro   0x0001bcf2       0x82 ./source/driversP/mqtt/matt.o
- .debug_macro   0x0001bd74       0x73 ./source/driversP/mqtt/matt.o
- .debug_macro   0x0001bde7      0x6fb ./source/driversP/mqtt/matt.o
- .debug_macro   0x0001c4e2       0x34 ./source/driversP/mqtt/matt.o
- .debug_macro   0x0001c516       0x22 ./source/driversP/mqtt/matt.o
- .debug_macro   0x0001c538       0x16 ./source/driversP/mqtt/matt.o
- .debug_macro   0x0001c54e       0x16 ./source/driversP/mqtt/matt.o
- .debug_macro   0x0001c564      0x243 ./source/driversP/mqtt/matt.o
- .debug_macro   0x0001c7a7       0xb8 ./source/driversP/mqtt/matt.o
- .debug_macro   0x0001c85f       0xb3 ./source/driversP/mqtt/matt.o
- .debug_macro   0x0001c912       0x6a ./source/driversP/mqtt/matt.o
- .debug_macro   0x0001c97c      0x1d1 ./source/driversP/mqtt/matt.o
- .debug_macro   0x0001cb4d      0x177 ./source/driversP/mqtt/matt.o
- .debug_macro   0x0001ccc4       0x3a ./source/driversP/mqtt/matt.o
- .debug_macro   0x0001ccfe       0x16 ./source/driversP/mqtt/matt.o
- .debug_macro   0x0001cd14       0x73 ./source/driversP/mqtt/matt.o
- .debug_macro   0x0001cd87      0x120 ./source/driversP/mqtt/matt.o
- .debug_macro   0x0001cea7       0x2e ./source/driversP/mqtt/matt.o
- .debug_macro   0x0001ced5       0x1e ./source/driversP/mqtt/matt.o
- .debug_macro   0x0001cef3       0x10 ./source/driversP/mqtt/matt.o
- .debug_macro   0x0001cf03       0x10 ./source/driversP/mqtt/matt.o
- .debug_macro   0x0001cf13       0x10 ./source/driversP/mqtt/matt.o
- .debug_macro   0x0001cf23       0x3f ./source/driversP/mqtt/matt.o
- .debug_macro   0x0001cf62       0x25 ./source/driversP/mqtt/matt.o
- .debug_macro   0x0001cf87       0x22 ./source/driversP/mqtt/matt.o
- .debug_macro   0x0001cfa9      0x15b ./source/driversP/mqtt/matt.o
- .debug_macro   0x0001d104      0x14b ./source/driversP/mqtt/matt.o
- .debug_macro   0x0001d24f       0xa0 ./source/driversP/mqtt/matt.o
- .debug_macro   0x0001d2ef       0x28 ./source/driversP/mqtt/matt.o
- .debug_macro   0x0001d317       0x2e ./source/driversP/mqtt/matt.o
- .debug_macro   0x0001d345       0xea ./source/driversP/mqtt/matt.o
- .debug_macro   0x0001d42f       0x10 ./source/driversP/mqtt/matt.o
- .debug_macro   0x0001d43f       0x4d ./source/driversP/mqtt/matt.o
- .debug_macro   0x0001d48c       0x35 ./source/driversP/mqtt/matt.o
- .debug_macro   0x0001d4c1      0x149 ./source/driversP/mqtt/matt.o
- .debug_macro   0x0001d60a      0x320 ./source/driversP/mqtt/matt.o
- .debug_macro   0x0001d92a      0x453 ./source/driversP/mqtt/matt.o
- .debug_macro   0x0001dd7d       0xa4 ./source/driversP/mqtt/matt.o
- .debug_macro   0x0001de21       0x16 ./source/driversP/mqtt/matt.o
- .debug_macro   0x0001de37       0x4c ./source/driversP/mqtt/matt.o
- .debug_macro   0x0001de83       0x2a ./source/driversP/mqtt/matt.o
- .debug_macro   0x0001dead       0x4c ./source/driversP/mqtt/matt.o
- .debug_macro   0x0001def9       0x5d ./source/driversP/mqtt/matt.o
- .debug_macro   0x0001df56      0x155 ./source/driversP/mqtt/matt.o
- .debug_macro   0x0001e0ab       0x10 ./source/driversP/mqtt/matt.o
- .debug_macro   0x0001e0bb       0x34 ./source/driversP/mqtt/matt.o
- .debug_macro   0x0001e0ef       0x10 ./source/driversP/mqtt/matt.o
- .debug_macro   0x0001e0ff       0xd2 ./source/driversP/mqtt/matt.o
- .debug_macro   0x0001e1d1       0xd1 ./source/driversP/mqtt/matt.o
- .debug_macro   0x0001e2a2       0x4c ./source/driversP/mqtt/matt.o
- .debug_macro   0x0001e2ee       0x10 ./source/driversP/mqtt/matt.o
- .debug_macro   0x0001e2fe      0x55d ./source/driversP/UART/uart_d.o
- .debug_macro   0x0001e85b       0x16 ./source/driversP/UART/uart_d.o
- .debug_macro   0x0001e871       0x10 ./source/driversP/UART/uart_d.o
- .debug_macro   0x0001e881       0x16 ./source/driversP/UART/uart_d.o
- .debug_macro   0x0001e897      0x53e ./source/driversP/GPIO/GPIO.o
- .debug_macro   0x0001edd5      0x132 ./source/lwip_mqtt_id_sim.o
- .debug_macro   0x0001ef07      0x547 ./source/main.o
- .debug_macro   0x0001f44e       0x11 ./source/semihost_hardfault.o
- .debug_macro   0x0001f45f      0x189 ./phy/fsl_phyksz8081.o
- .debug_macro   0x0001f5e8      0x133 ./mdio/fsl_enet_mdio.o
- .debug_macro   0x0001f71b       0xcb ./mdio/fsl_enet_mdio.o
- .debug_macro   0x0001f7e6      0x398 ./lwip/src/netif/ethernet.o
- .debug_macro   0x0001fb7e       0x3b ./lwip/src/netif/ethernet.o
- .debug_macro   0x0001fbb9      0x428 ./lwip/src/core/ipv4/dhcp.o
- .debug_macro   0x0001ffe1       0x3b ./lwip/src/core/ipv4/dhcp.o
- .debug_macro   0x0002001c       0x2e ./lwip/src/core/ipv4/dhcp.o
- .debug_macro   0x0002004a      0x3fe ./lwip/src/core/ipv4/etharp.o
- .debug_macro   0x00020448      0x1cb ./lwip/src/core/ipv4/etharp.o
- .debug_macro   0x00020613      0x373 ./lwip/src/core/ipv4/icmp.o
- .debug_macro   0x00020986       0x70 ./lwip/src/core/ipv4/icmp.o
- .debug_macro   0x000209f6       0x1c ./lwip/src/core/ipv4/icmp.o
- .debug_macro   0x00020a12      0x401 ./lwip/src/core/ipv4/ip4.o
- .debug_macro   0x00020e13       0x16 ./lwip/src/core/ipv4/ip4.o
- .debug_macro   0x00020e29       0x47 ./lwip/src/core/ipv4/ip4.o
- .debug_macro   0x00020e70       0x2e ./lwip/src/core/ipv4/ip4.o
- .debug_macro   0x00020e9e       0xf2 ./lwip/src/core/ipv4/ip4.o
- .debug_macro   0x00020f90       0x7c ./lwip/src/core/ipv4/ip4.o
- .debug_macro   0x0002100c      0x1dd ./lwip/src/core/ipv4/ip4.o
- .debug_macro   0x000211e9      0x305 ./lwip/src/core/ipv4/ip4_addr.o
- .debug_macro   0x000214ee      0x39a ./lwip/src/core/ipv4/ip4_frag.o
- .debug_macro   0x00021888       0x10 ./lwip/src/core/ipv4/ip4_frag.o
- .debug_macro   0x00021898      0x263 ./lwip/src/core/def.o
- .debug_macro   0x00021afb      0x3ce ./lwip/src/core/dns.o
- .debug_macro   0x00021ec9      0x108 ./lwip/src/core/dns.o
- .debug_macro   0x00021fd1      0x2bd ./lwip/src/core/inet_chksum.o
- .debug_macro   0x0002228e       0x16 ./lwip/src/core/inet_chksum.o
- .debug_macro   0x000222a4      0x485 ./lwip/src/core/init.o
- .debug_macro   0x00022729       0x5e ./lwip/src/core/init.o
- .debug_macro   0x00022787       0x40 ./lwip/src/core/init.o
- .debug_macro   0x000227c7      0x345 ./lwip/src/core/ip.o
- .debug_macro   0x00022b0c      0x367 ./lwip/src/core/mem.o
- .debug_macro   0x00022e73      0x4d9 ./lwip/src/core/memp.o
- .debug_macro   0x0002334c      0x157 ./lwip/src/core/memp.o
- .debug_macro   0x000234a3       0x41 ./lwip/src/core/memp.o
- .debug_macro   0x000234e4      0x122 ./lwip/src/core/memp.o
- .debug_macro   0x00023606      0x126 ./lwip/src/core/memp.o
- .debug_macro   0x0002372c       0x24 ./lwip/src/core/memp.o
- .debug_macro   0x00023750       0xaa ./lwip/src/core/memp.o
- .debug_macro   0x000237fa      0x439 ./lwip/src/core/netif.o
- .debug_macro   0x00023c33      0x32f ./lwip/src/core/pbuf.o
- .debug_macro   0x00023f62      0x361 ./lwip/src/core/raw.o
- .debug_macro   0x000242c3      0x276 ./lwip/src/core/sys.o
- .debug_macro   0x00024539      0x3ba ./lwip/src/core/tcp.o
- .debug_macro   0x000248f3      0x3a7 ./lwip/src/core/tcp_in.o
- .debug_macro   0x00024c9a      0x3b5 ./lwip/src/core/tcp_out.o
- .debug_macro   0x0002504f      0x479 ./lwip/src/core/timeouts.o
- .debug_macro   0x000254c8       0x10 ./lwip/src/core/timeouts.o
- .debug_macro   0x000254d8      0x3b6 ./lwip/src/core/udp.o
- .debug_macro   0x0002588e      0x425 ./lwip/src/apps/mqtt/mqtt.o
- .debug_macro   0x00025cb3       0x28 ./lwip/src/apps/mqtt/mqtt.o
- .debug_macro   0x00025cdb      0x11c ./lwip/src/apps/mqtt/mqtt.o
- .debug_macro   0x00025df7      0x45d ./lwip/src/api/api_lib.o
- .debug_macro   0x00026254      0x439 ./lwip/src/api/api_msg.o
- .debug_macro   0x0002668d      0x43f ./lwip/src/api/netifapi.o
- .debug_macro   0x00026acc      0x3e0 ./lwip/src/api/tcpip.o
- .debug_macro   0x00026eac      0x3e2 ./lwip/port/enet_ethernetif.o
- .debug_macro   0x0002728e       0xba ./lwip/port/enet_ethernetif.o
- .debug_macro   0x00027348       0x97 ./lwip/port/enet_ethernetif.o
- .debug_macro   0x000273df       0x2e ./lwip/port/enet_ethernetif.o
- .debug_macro   0x0002740d      0x421 ./lwip/port/enet_ethernetif_kinetis.o
- .debug_macro   0x0002782e      0x336 ./lwip/port/sys_arch.o
- .debug_macro   0x00027b64       0x6d ./lwip/port/sys_arch.o
- .debug_macro   0x00027bd1       0xd3 ./freertos/freertos_kernel/portable/MemMang/heap_3.o
- .debug_macro   0x00027ca4      0x179 ./freertos/freertos_kernel/portable/GCC/ARM_CM4F/port.o
- .debug_macro   0x00027e1d       0x16 ./freertos/freertos_kernel/portable/GCC/ARM_CM4F/port.o
- .debug_macro   0x00027e33      0x113 ./freertos/freertos_kernel/event_groups.o
- .debug_macro   0x00027f46       0x91 ./freertos/freertos_kernel/event_groups.o
- .debug_macro   0x00027fd7       0xc4 ./freertos/freertos_kernel/list.o
- .debug_macro   0x0002809b      0x12b ./freertos/freertos_kernel/queue.o
- .debug_macro   0x000281c6      0x1a5 ./freertos/freertos_kernel/tasks.o
- .debug_macro   0x0002836b       0x10 ./freertos/freertos_kernel/tasks.o
- .debug_macro   0x0002837b       0x16 ./freertos/freertos_kernel/tasks.o
- .debug_macro   0x00028391      0x10d ./freertos/freertos_kernel/timers.o
- .debug_macro   0x0002849e      0x1e4 ./drivers/fsl_clock.o
- .debug_macro   0x00028682      0x133 ./drivers/fsl_enet.o
- .debug_macro   0x000287b5      0x121 ./drivers/fsl_gpio.o
- .debug_macro   0x000288d6       0x10 ./drivers/fsl_gpio.o
- .debug_macro   0x000288e6      0x121 ./drivers/fsl_lpuart.o
- .debug_macro   0x00028a07       0x10 ./drivers/fsl_lpuart.o
- .debug_macro   0x00028a17      0x122 ./drivers/fsl_sim.o
- .debug_macro   0x00028b39      0x127 ./drivers/fsl_uart.o
- .debug_macro   0x00028c60       0x10 ./drivers/fsl_uart.o
- .debug_macro   0x00028c70       0x98 ./device/system_MK66F18.o
- .debug_macro   0x00028d08      0x170 ./component/uart/fsl_adapter_uart.o
- .debug_macro   0x00028e78       0x40 ./component/uart/fsl_adapter_uart.o
- .debug_macro   0x00028eb8      0x1d7 ./component/serial_manager/fsl_component_serial_manager.o
- .debug_macro   0x0002908f       0x6a ./component/serial_manager/fsl_component_serial_manager.o
- .debug_macro   0x000290f9      0x1a1 ./component/serial_manager/fsl_component_serial_port_uart.o
- .debug_macro   0x0002929a      0x1d8 ./board/board.o
- .debug_macro   0x00029472       0x1c ./board/board.o
- .debug_macro   0x0002948e      0x24f ./board/board.o
- .debug_macro   0x000296dd      0x153 ./board/clock_config.o
- .debug_macro   0x00029830      0x127 ./board/pin_mux.o
+ .debug_macro   0x0001b420      0x574 ./source/driversP/mqtt/matt.o
+ .debug_macro   0x0001b994       0x34 ./source/driversP/mqtt/matt.o
+ .debug_macro   0x0001b9c8      0x1aa ./source/driversP/mqtt/matt.o
+ .debug_macro   0x0001bb72       0x16 ./source/driversP/mqtt/matt.o
+ .debug_macro   0x0001bb88       0x34 ./source/driversP/mqtt/matt.o
+ .debug_macro   0x0001bbbc       0x2e ./source/driversP/mqtt/matt.o
+ .debug_macro   0x0001bbea       0x10 ./source/driversP/mqtt/matt.o
+ .debug_macro   0x0001bbfa       0x1d ./source/driversP/mqtt/matt.o
+ .debug_macro   0x0001bc17       0x7c ./source/driversP/mqtt/matt.o
+ .debug_macro   0x0001bc93       0x19 ./source/driversP/mqtt/matt.o
+ .debug_macro   0x0001bcac       0x7c ./source/driversP/mqtt/matt.o
+ .debug_macro   0x0001bd28       0x82 ./source/driversP/mqtt/matt.o
+ .debug_macro   0x0001bdaa       0x73 ./source/driversP/mqtt/matt.o
+ .debug_macro   0x0001be1d      0x6fb ./source/driversP/mqtt/matt.o
+ .debug_macro   0x0001c518       0x34 ./source/driversP/mqtt/matt.o
+ .debug_macro   0x0001c54c       0x22 ./source/driversP/mqtt/matt.o
+ .debug_macro   0x0001c56e       0x16 ./source/driversP/mqtt/matt.o
+ .debug_macro   0x0001c584       0x16 ./source/driversP/mqtt/matt.o
+ .debug_macro   0x0001c59a      0x243 ./source/driversP/mqtt/matt.o
+ .debug_macro   0x0001c7dd       0xb8 ./source/driversP/mqtt/matt.o
+ .debug_macro   0x0001c895       0xb3 ./source/driversP/mqtt/matt.o
+ .debug_macro   0x0001c948       0x6a ./source/driversP/mqtt/matt.o
+ .debug_macro   0x0001c9b2      0x1d1 ./source/driversP/mqtt/matt.o
+ .debug_macro   0x0001cb83      0x177 ./source/driversP/mqtt/matt.o
+ .debug_macro   0x0001ccfa       0x3a ./source/driversP/mqtt/matt.o
+ .debug_macro   0x0001cd34       0x16 ./source/driversP/mqtt/matt.o
+ .debug_macro   0x0001cd4a       0x73 ./source/driversP/mqtt/matt.o
+ .debug_macro   0x0001cdbd      0x120 ./source/driversP/mqtt/matt.o
+ .debug_macro   0x0001cedd       0x2e ./source/driversP/mqtt/matt.o
+ .debug_macro   0x0001cf0b       0x1e ./source/driversP/mqtt/matt.o
+ .debug_macro   0x0001cf29       0x10 ./source/driversP/mqtt/matt.o
+ .debug_macro   0x0001cf39       0x10 ./source/driversP/mqtt/matt.o
+ .debug_macro   0x0001cf49       0x10 ./source/driversP/mqtt/matt.o
+ .debug_macro   0x0001cf59       0x3f ./source/driversP/mqtt/matt.o
+ .debug_macro   0x0001cf98       0x25 ./source/driversP/mqtt/matt.o
+ .debug_macro   0x0001cfbd       0x22 ./source/driversP/mqtt/matt.o
+ .debug_macro   0x0001cfdf      0x15b ./source/driversP/mqtt/matt.o
+ .debug_macro   0x0001d13a      0x14b ./source/driversP/mqtt/matt.o
+ .debug_macro   0x0001d285       0xa0 ./source/driversP/mqtt/matt.o
+ .debug_macro   0x0001d325       0x28 ./source/driversP/mqtt/matt.o
+ .debug_macro   0x0001d34d       0x2e ./source/driversP/mqtt/matt.o
+ .debug_macro   0x0001d37b       0xea ./source/driversP/mqtt/matt.o
+ .debug_macro   0x0001d465       0x10 ./source/driversP/mqtt/matt.o
+ .debug_macro   0x0001d475       0x4d ./source/driversP/mqtt/matt.o
+ .debug_macro   0x0001d4c2       0x35 ./source/driversP/mqtt/matt.o
+ .debug_macro   0x0001d4f7      0x149 ./source/driversP/mqtt/matt.o
+ .debug_macro   0x0001d640      0x320 ./source/driversP/mqtt/matt.o
+ .debug_macro   0x0001d960      0x453 ./source/driversP/mqtt/matt.o
+ .debug_macro   0x0001ddb3       0xa4 ./source/driversP/mqtt/matt.o
+ .debug_macro   0x0001de57       0x16 ./source/driversP/mqtt/matt.o
+ .debug_macro   0x0001de6d       0x4c ./source/driversP/mqtt/matt.o
+ .debug_macro   0x0001deb9       0x2a ./source/driversP/mqtt/matt.o
+ .debug_macro   0x0001dee3       0x4c ./source/driversP/mqtt/matt.o
+ .debug_macro   0x0001df2f       0x5d ./source/driversP/mqtt/matt.o
+ .debug_macro   0x0001df8c      0x155 ./source/driversP/mqtt/matt.o
+ .debug_macro   0x0001e0e1       0x10 ./source/driversP/mqtt/matt.o
+ .debug_macro   0x0001e0f1       0x34 ./source/driversP/mqtt/matt.o
+ .debug_macro   0x0001e125       0x10 ./source/driversP/mqtt/matt.o
+ .debug_macro   0x0001e135       0xd2 ./source/driversP/mqtt/matt.o
+ .debug_macro   0x0001e207       0xd1 ./source/driversP/mqtt/matt.o
+ .debug_macro   0x0001e2d8       0x10 ./source/driversP/mqtt/matt.o
+ .debug_macro   0x0001e2e8       0x10 ./source/driversP/mqtt/matt.o
+ .debug_macro   0x0001e2f8       0x16 ./source/driversP/mqtt/matt.o
+ .debug_macro   0x0001e30e       0x10 ./source/driversP/mqtt/matt.o
+ .debug_macro   0x0001e31e       0x4c ./source/driversP/mqtt/matt.o
+ .debug_macro   0x0001e36a      0x574 ./source/driversP/UART/uart_d.o
+ .debug_macro   0x0001e8de      0x583 ./source/driversP/GPIO/GPIO.o
+ .debug_macro   0x0001ee61       0xd8 ./source/driversP/GPIO/GPIO.o
+ .debug_macro   0x0001ef39       0x1c ./source/driversP/GPIO/GPIO.o
+ .debug_macro   0x0001ef55      0x24f ./source/driversP/GPIO/GPIO.o
+ .debug_macro   0x0001f1a4      0x132 ./source/lwip_mqtt_id_sim.o
+ .debug_macro   0x0001f2d6      0x581 ./source/main.o
+ .debug_macro   0x0001f857       0x11 ./source/semihost_hardfault.o
+ .debug_macro   0x0001f868      0x189 ./phy/fsl_phyksz8081.o
+ .debug_macro   0x0001f9f1      0x133 ./mdio/fsl_enet_mdio.o
+ .debug_macro   0x0001fb24       0xcb ./mdio/fsl_enet_mdio.o
+ .debug_macro   0x0001fbef      0x398 ./lwip/src/netif/ethernet.o
+ .debug_macro   0x0001ff87       0x3b ./lwip/src/netif/ethernet.o
+ .debug_macro   0x0001ffc2      0x428 ./lwip/src/core/ipv4/dhcp.o
+ .debug_macro   0x000203ea       0x3b ./lwip/src/core/ipv4/dhcp.o
+ .debug_macro   0x00020425       0x2e ./lwip/src/core/ipv4/dhcp.o
+ .debug_macro   0x00020453      0x3fe ./lwip/src/core/ipv4/etharp.o
+ .debug_macro   0x00020851      0x1cb ./lwip/src/core/ipv4/etharp.o
+ .debug_macro   0x00020a1c      0x373 ./lwip/src/core/ipv4/icmp.o
+ .debug_macro   0x00020d8f       0x70 ./lwip/src/core/ipv4/icmp.o
+ .debug_macro   0x00020dff       0x1c ./lwip/src/core/ipv4/icmp.o
+ .debug_macro   0x00020e1b      0x401 ./lwip/src/core/ipv4/ip4.o
+ .debug_macro   0x0002121c       0x16 ./lwip/src/core/ipv4/ip4.o
+ .debug_macro   0x00021232       0x47 ./lwip/src/core/ipv4/ip4.o
+ .debug_macro   0x00021279       0x2e ./lwip/src/core/ipv4/ip4.o
+ .debug_macro   0x000212a7       0xf2 ./lwip/src/core/ipv4/ip4.o
+ .debug_macro   0x00021399       0x7c ./lwip/src/core/ipv4/ip4.o
+ .debug_macro   0x00021415      0x1dd ./lwip/src/core/ipv4/ip4.o
+ .debug_macro   0x000215f2      0x305 ./lwip/src/core/ipv4/ip4_addr.o
+ .debug_macro   0x000218f7      0x39a ./lwip/src/core/ipv4/ip4_frag.o
+ .debug_macro   0x00021c91       0x10 ./lwip/src/core/ipv4/ip4_frag.o
+ .debug_macro   0x00021ca1      0x263 ./lwip/src/core/def.o
+ .debug_macro   0x00021f04      0x3ce ./lwip/src/core/dns.o
+ .debug_macro   0x000222d2      0x108 ./lwip/src/core/dns.o
+ .debug_macro   0x000223da      0x2bd ./lwip/src/core/inet_chksum.o
+ .debug_macro   0x00022697       0x16 ./lwip/src/core/inet_chksum.o
+ .debug_macro   0x000226ad      0x485 ./lwip/src/core/init.o
+ .debug_macro   0x00022b32       0x5e ./lwip/src/core/init.o
+ .debug_macro   0x00022b90       0x40 ./lwip/src/core/init.o
+ .debug_macro   0x00022bd0      0x345 ./lwip/src/core/ip.o
+ .debug_macro   0x00022f15      0x367 ./lwip/src/core/mem.o
+ .debug_macro   0x0002327c      0x4d9 ./lwip/src/core/memp.o
+ .debug_macro   0x00023755      0x157 ./lwip/src/core/memp.o
+ .debug_macro   0x000238ac       0x41 ./lwip/src/core/memp.o
+ .debug_macro   0x000238ed      0x122 ./lwip/src/core/memp.o
+ .debug_macro   0x00023a0f      0x126 ./lwip/src/core/memp.o
+ .debug_macro   0x00023b35       0x24 ./lwip/src/core/memp.o
+ .debug_macro   0x00023b59       0xaa ./lwip/src/core/memp.o
+ .debug_macro   0x00023c03      0x439 ./lwip/src/core/netif.o
+ .debug_macro   0x0002403c      0x32f ./lwip/src/core/pbuf.o
+ .debug_macro   0x0002436b      0x361 ./lwip/src/core/raw.o
+ .debug_macro   0x000246cc      0x276 ./lwip/src/core/sys.o
+ .debug_macro   0x00024942      0x3ba ./lwip/src/core/tcp.o
+ .debug_macro   0x00024cfc      0x3a7 ./lwip/src/core/tcp_in.o
+ .debug_macro   0x000250a3      0x3b5 ./lwip/src/core/tcp_out.o
+ .debug_macro   0x00025458      0x479 ./lwip/src/core/timeouts.o
+ .debug_macro   0x000258d1       0x10 ./lwip/src/core/timeouts.o
+ .debug_macro   0x000258e1      0x3b6 ./lwip/src/core/udp.o
+ .debug_macro   0x00025c97      0x425 ./lwip/src/apps/mqtt/mqtt.o
+ .debug_macro   0x000260bc       0x28 ./lwip/src/apps/mqtt/mqtt.o
+ .debug_macro   0x000260e4      0x11c ./lwip/src/apps/mqtt/mqtt.o
+ .debug_macro   0x00026200      0x45d ./lwip/src/api/api_lib.o
+ .debug_macro   0x0002665d      0x439 ./lwip/src/api/api_msg.o
+ .debug_macro   0x00026a96      0x43f ./lwip/src/api/netifapi.o
+ .debug_macro   0x00026ed5      0x3e0 ./lwip/src/api/tcpip.o
+ .debug_macro   0x000272b5      0x3e2 ./lwip/port/enet_ethernetif.o
+ .debug_macro   0x00027697       0xba ./lwip/port/enet_ethernetif.o
+ .debug_macro   0x00027751       0x97 ./lwip/port/enet_ethernetif.o
+ .debug_macro   0x000277e8       0x2e ./lwip/port/enet_ethernetif.o
+ .debug_macro   0x00027816      0x421 ./lwip/port/enet_ethernetif_kinetis.o
+ .debug_macro   0x00027c37      0x336 ./lwip/port/sys_arch.o
+ .debug_macro   0x00027f6d       0x6d ./lwip/port/sys_arch.o
+ .debug_macro   0x00027fda       0xd3 ./freertos/freertos_kernel/portable/MemMang/heap_3.o
+ .debug_macro   0x000280ad      0x179 ./freertos/freertos_kernel/portable/GCC/ARM_CM4F/port.o
+ .debug_macro   0x00028226       0x16 ./freertos/freertos_kernel/portable/GCC/ARM_CM4F/port.o
+ .debug_macro   0x0002823c      0x113 ./freertos/freertos_kernel/event_groups.o
+ .debug_macro   0x0002834f       0x91 ./freertos/freertos_kernel/event_groups.o
+ .debug_macro   0x000283e0       0xc4 ./freertos/freertos_kernel/list.o
+ .debug_macro   0x000284a4      0x12b ./freertos/freertos_kernel/queue.o
+ .debug_macro   0x000285cf      0x1a5 ./freertos/freertos_kernel/tasks.o
+ .debug_macro   0x00028774       0x10 ./freertos/freertos_kernel/tasks.o
+ .debug_macro   0x00028784       0x16 ./freertos/freertos_kernel/tasks.o
+ .debug_macro   0x0002879a      0x10d ./freertos/freertos_kernel/timers.o
+ .debug_macro   0x000288a7      0x1e4 ./drivers/fsl_clock.o
+ .debug_macro   0x00028a8b      0x133 ./drivers/fsl_enet.o
+ .debug_macro   0x00028bbe      0x121 ./drivers/fsl_gpio.o
+ .debug_macro   0x00028cdf       0x10 ./drivers/fsl_gpio.o
+ .debug_macro   0x00028cef      0x121 ./drivers/fsl_lpuart.o
+ .debug_macro   0x00028e10       0x10 ./drivers/fsl_lpuart.o
+ .debug_macro   0x00028e20      0x122 ./drivers/fsl_sim.o
+ .debug_macro   0x00028f42      0x127 ./drivers/fsl_uart.o
+ .debug_macro   0x00029069       0x10 ./drivers/fsl_uart.o
+ .debug_macro   0x00029079       0x98 ./device/system_MK66F18.o
+ .debug_macro   0x00029111      0x170 ./component/uart/fsl_adapter_uart.o
+ .debug_macro   0x00029281       0x40 ./component/uart/fsl_adapter_uart.o
+ .debug_macro   0x000292c1      0x1d7 ./component/serial_manager/fsl_component_serial_manager.o
+ .debug_macro   0x00029498       0x6a ./component/serial_manager/fsl_component_serial_manager.o
+ .debug_macro   0x00029502      0x1a1 ./component/serial_manager/fsl_component_serial_port_uart.o
+ .debug_macro   0x000296a3      0x1d8 ./board/board.o
+ .debug_macro   0x0002987b      0x153 ./board/clock_config.o
+ .debug_macro   0x000299ce      0x127 ./board/pin_mux.o
 
-.debug_line     0x00000000    0x38901
+.debug_line     0x00000000    0x38b14
  .debug_line    0x00000000      0x686 ./utilities/fsl_assert.o
  .debug_line    0x00000686      0xab6 ./utilities/fsl_debug_console.o
  .debug_line    0x0000113c      0xe6b ./utilities/fsl_str.o
  .debug_line    0x00001fa7      0xb63 ./startup/startup_mk66f18.o
- .debug_line    0x00002b0a     0x1188 ./source/driversP/mqtt/matt.o
- .debug_line    0x00003c92     0x101b ./source/driversP/UART/uart_d.o
- .debug_line    0x00004cad      0xfaf ./source/driversP/GPIO/GPIO.o
- .debug_line    0x00005c5c      0x3e9 ./source/lwip_mqtt_id_sim.o
- .debug_line    0x00006045      0xe8c ./source/main.o
- .debug_line    0x00006ed1       0x59 ./source/semihost_hardfault.o
- .debug_line    0x00006f2a      0x66d ./phy/fsl_phyksz8081.o
- .debug_line    0x00007597      0x575 ./mdio/fsl_enet_mdio.o
- .debug_line    0x00007b0c      0xbd3 ./lwip/src/netif/ethernet.o
- .debug_line    0x000086df     0x1bf0 ./lwip/src/core/ipv4/dhcp.o
- .debug_line    0x0000a2cf     0x1162 ./lwip/src/core/ipv4/etharp.o
- .debug_line    0x0000b431      0xba3 ./lwip/src/core/ipv4/icmp.o
- .debug_line    0x0000bfd4      0xe1f ./lwip/src/core/ipv4/ip4.o
- .debug_line    0x0000cdf3      0xc0e ./lwip/src/core/ipv4/ip4_addr.o
- .debug_line    0x0000da01     0x10ad ./lwip/src/core/ipv4/ip4_frag.o
- .debug_line    0x0000eaae      0xa22 ./lwip/src/core/def.o
- .debug_line    0x0000f4d0     0x1289 ./lwip/src/core/dns.o
- .debug_line    0x00010759      0xb63 ./lwip/src/core/inet_chksum.o
- .debug_line    0x000112bc      0xb49 ./lwip/src/core/init.o
- .debug_line    0x00011e05      0x993 ./lwip/src/core/ip.o
- .debug_line    0x00012798      0xd7e ./lwip/src/core/mem.o
- .debug_line    0x00013516      0xd3b ./lwip/src/core/memp.o
- .debug_line    0x00014251     0x1095 ./lwip/src/core/netif.o
- .debug_line    0x000152e6     0x1425 ./lwip/src/core/pbuf.o
- .debug_line    0x0001670b      0xdbf ./lwip/src/core/raw.o
- .debug_line    0x000174ca      0x834 ./lwip/src/core/sys.o
- .debug_line    0x00017cfe     0x1cc2 ./lwip/src/core/tcp.o
- .debug_line    0x000199c0     0x1a08 ./lwip/src/core/tcp_in.o
- .debug_line    0x0001b3c8     0x1b0f ./lwip/src/core/tcp_out.o
- .debug_line    0x0001ced7      0xd84 ./lwip/src/core/timeouts.o
- .debug_line    0x0001dc5b     0x110c ./lwip/src/core/udp.o
- .debug_line    0x0001ed67     0x198e ./lwip/src/apps/mqtt/mqtt.o
- .debug_line    0x000206f5     0x12c2 ./lwip/src/api/api_lib.o
- .debug_line    0x000219b7     0x1c12 ./lwip/src/api/api_msg.o
- .debug_line    0x000235c9      0xc34 ./lwip/src/api/netifapi.o
- .debug_line    0x000241fd      0xd85 ./lwip/src/api/tcpip.o
- .debug_line    0x00024f82      0xe24 ./lwip/port/enet_ethernetif.o
- .debug_line    0x00025da6     0x1071 ./lwip/port/enet_ethernetif_kinetis.o
- .debug_line    0x00026e17      0xdd9 ./lwip/port/sys_arch.o
- .debug_line    0x00027bf0      0x3b2 ./freertos/freertos_kernel/portable/MemMang/heap_3.o
- .debug_line    0x00027fa2      0x678 ./freertos/freertos_kernel/portable/GCC/ARM_CM4F/port.o
- .debug_line    0x0002861a      0x7e7 ./freertos/freertos_kernel/event_groups.o
- .debug_line    0x00028e01      0x46d ./freertos/freertos_kernel/list.o
- .debug_line    0x0002926e     0x12a5 ./freertos/freertos_kernel/queue.o
- .debug_line    0x0002a513     0x1a0f ./freertos/freertos_kernel/tasks.o
- .debug_line    0x0002bf22      0xa31 ./freertos/freertos_kernel/timers.o
- .debug_line    0x0002c953     0x1920 ./drivers/fsl_clock.o
- .debug_line    0x0002e273     0x1e53 ./drivers/fsl_enet.o
- .debug_line    0x000300c6      0x41f ./drivers/fsl_gpio.o
- .debug_line    0x000304e5      0xfff ./drivers/fsl_lpuart.o
- .debug_line    0x000314e4      0x379 ./drivers/fsl_sim.o
- .debug_line    0x0003185d     0x14c6 ./drivers/fsl_uart.o
- .debug_line    0x00032d23      0x43b ./device/system_MK66F18.o
- .debug_line    0x0003315e      0x70a ./component/uart/fsl_adapter_uart.o
- .debug_line    0x00033868      0x982 ./component/serial_manager/fsl_component_serial_manager.o
- .debug_line    0x000341ea      0x752 ./component/serial_manager/fsl_component_serial_port_uart.o
- .debug_line    0x0003493c      0x70a ./board/board.o
- .debug_line    0x00035046      0x4fe ./board/clock_config.o
- .debug_line    0x00035544      0x52f ./board/pin_mux.o
- .debug_line    0x00035a73       0xc4 C:/nxp/MCUXpressoIDE_11.10.0_3148/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.10.0.202311280810/tools/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libcr_nohost_nf.a(_cr__main.o)
- .debug_line    0x00035b37       0x9b C:/nxp/MCUXpressoIDE_11.10.0_3148/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.10.0.202311280810/tools/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libcr_c.a(memcpy.o)
- .debug_line    0x00035bd2       0x7b C:/nxp/MCUXpressoIDE_11.10.0_3148/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.10.0.202311280810/tools/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libcr_c.a(memset.o)
- .debug_line    0x00035c4d      0x37b C:/nxp/MCUXpressoIDE_11.10.0_3148/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.10.0.202311280810/tools/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libcr_c.a(alloc.o)
- .debug_line    0x00035fc8      0x1ca C:/nxp/MCUXpressoIDE_11.10.0_3148/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.10.0.202311280810/tools/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libcr_c.a(ctype.o)
- .debug_line    0x00036192      0x152 C:/nxp/MCUXpressoIDE_11.10.0_3148/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.10.0.202311280810/tools/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libcr_c.a(initio.o)
- .debug_line    0x000362e4       0xc9 C:/nxp/MCUXpressoIDE_11.10.0_3148/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.10.0.202311280810/tools/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libcr_c.a(memcmp.o)
- .debug_line    0x000363ad     0x1070 C:/nxp/MCUXpressoIDE_11.10.0_3148/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.10.0.202311280810/tools/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libcr_c.a(printf.o)
- .debug_line    0x0003741d       0xed C:/nxp/MCUXpressoIDE_11.10.0_3148/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.10.0.202311280810/tools/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libcr_c.a(setvbuf.o)
- .debug_line    0x0003750a       0xaf C:/nxp/MCUXpressoIDE_11.10.0_3148/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.10.0.202311280810/tools/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libcr_c.a(strcpy.o)
- .debug_line    0x000375b9      0x109 C:/nxp/MCUXpressoIDE_11.10.0_3148/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.10.0.202311280810/tools/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libcr_c.a(strlen.o)
- .debug_line    0x000376c2       0x59 C:/nxp/MCUXpressoIDE_11.10.0_3148/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.10.0.202311280810/tools/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libcr_c.a(__init_alloc.o)
- .debug_line    0x0003771b       0xf6 C:/nxp/MCUXpressoIDE_11.10.0_3148/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.10.0.202311280810/tools/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libcr_c.a(_cr_sbrk.o)
- .debug_line    0x00037811      0x2dd C:/nxp/MCUXpressoIDE_11.10.0_3148/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.10.0.202311280810/tools/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libcr_c.a(_deferredlazyseek.o)
- .debug_line    0x00037aee      0x11c C:/nxp/MCUXpressoIDE_11.10.0_3148/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.10.0.202311280810/tools/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libcr_c.a(_fdopen.o)
- .debug_line    0x00037c0a      0x121 C:/nxp/MCUXpressoIDE_11.10.0_3148/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.10.0.202311280810/tools/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libcr_c.a(_fflush.o)
- .debug_line    0x00037d2b      0x125 C:/nxp/MCUXpressoIDE_11.10.0_3148/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.10.0.202311280810/tools/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libcr_c.a(_writebuf.o)
- .debug_line    0x00037e50      0x107 C:/nxp/MCUXpressoIDE_11.10.0_3148/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.10.0.202311280810/tools/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libcr_c.a(fclose.o)
- .debug_line    0x00037f57       0xe3 C:/nxp/MCUXpressoIDE_11.10.0_3148/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.10.0.202311280810/tools/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libcr_c.a(fflush.o)
- .debug_line    0x0003803a      0x225 C:/nxp/MCUXpressoIDE_11.10.0_3148/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.10.0.202311280810/tools/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libcr_c.a(fseek.o)
- .debug_line    0x0003825f      0x105 C:/nxp/MCUXpressoIDE_11.10.0_3148/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.10.0.202311280810/tools/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libcr_c.a(ftell.o)
- .debug_line    0x00038364       0xec C:/nxp/MCUXpressoIDE_11.10.0_3148/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.10.0.202311280810/tools/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libcr_c.a(remove.o)
- .debug_line    0x00038450       0x61 C:/nxp/MCUXpressoIDE_11.10.0_3148/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.10.0.202311280810/tools/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libcr_c.a(_cr_check_heap.o)
- .debug_line    0x000384b1       0xf6 C:/nxp/MCUXpressoIDE_11.10.0_3148/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.10.0.202311280810/tools/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libcr_c.a(_do_fflush.o)
- .debug_line    0x000385a7       0xea C:/nxp/MCUXpressoIDE_11.10.0_3148/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.10.0.202311280810/tools/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libcr_nohost_nf.a(__ciob.o)
- .debug_line    0x00038691       0x4e C:/nxp/MCUXpressoIDE_11.10.0_3148/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.10.0.202311280810/tools/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libcr_nohost_nf.a(__sys_appexit.o)
- .debug_line    0x000386df       0x4e C:/nxp/MCUXpressoIDE_11.10.0_3148/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.10.0.202311280810/tools/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libcr_nohost_nf.a(__sys_close.o)
- .debug_line    0x0003872d       0x4d C:/nxp/MCUXpressoIDE_11.10.0_3148/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.10.0.202311280810/tools/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libcr_nohost_nf.a(__sys_flen.o)
- .debug_line    0x0003877a       0x4e C:/nxp/MCUXpressoIDE_11.10.0_3148/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.10.0.202311280810/tools/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libcr_nohost_nf.a(__sys_istty.o)
- .debug_line    0x000387c8       0x4f C:/nxp/MCUXpressoIDE_11.10.0_3148/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.10.0.202311280810/tools/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libcr_nohost_nf.a(__sys_remove.o)
- .debug_line    0x00038817       0x4d C:/nxp/MCUXpressoIDE_11.10.0_3148/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.10.0.202311280810/tools/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libcr_nohost_nf.a(__sys_seek.o)
- .debug_line    0x00038864       0x4f C:/nxp/MCUXpressoIDE_11.10.0_3148/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.10.0.202311280810/tools/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libcr_nohost_nf.a(__sys_tmpnam.o)
- .debug_line    0x000388b3       0x4e C:/nxp/MCUXpressoIDE_11.10.0_3148/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.10.0.202311280810/tools/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libcr_nohost_nf.a(__sys_write.o)
+ .debug_line    0x00002b0a     0x1214 ./source/driversP/mqtt/matt.o
+ .debug_line    0x00003d1e     0x1019 ./source/driversP/UART/uart_d.o
+ .debug_line    0x00004d37     0x1036 ./source/driversP/GPIO/GPIO.o
+ .debug_line    0x00005d6d      0x3e9 ./source/lwip_mqtt_id_sim.o
+ .debug_line    0x00006156      0xf8e ./source/main.o
+ .debug_line    0x000070e4       0x59 ./source/semihost_hardfault.o
+ .debug_line    0x0000713d      0x66d ./phy/fsl_phyksz8081.o
+ .debug_line    0x000077aa      0x575 ./mdio/fsl_enet_mdio.o
+ .debug_line    0x00007d1f      0xbd3 ./lwip/src/netif/ethernet.o
+ .debug_line    0x000088f2     0x1bf0 ./lwip/src/core/ipv4/dhcp.o
+ .debug_line    0x0000a4e2     0x1162 ./lwip/src/core/ipv4/etharp.o
+ .debug_line    0x0000b644      0xba3 ./lwip/src/core/ipv4/icmp.o
+ .debug_line    0x0000c1e7      0xe1f ./lwip/src/core/ipv4/ip4.o
+ .debug_line    0x0000d006      0xc0e ./lwip/src/core/ipv4/ip4_addr.o
+ .debug_line    0x0000dc14     0x10ad ./lwip/src/core/ipv4/ip4_frag.o
+ .debug_line    0x0000ecc1      0xa22 ./lwip/src/core/def.o
+ .debug_line    0x0000f6e3     0x1289 ./lwip/src/core/dns.o
+ .debug_line    0x0001096c      0xb63 ./lwip/src/core/inet_chksum.o
+ .debug_line    0x000114cf      0xb49 ./lwip/src/core/init.o
+ .debug_line    0x00012018      0x993 ./lwip/src/core/ip.o
+ .debug_line    0x000129ab      0xd7e ./lwip/src/core/mem.o
+ .debug_line    0x00013729      0xd3b ./lwip/src/core/memp.o
+ .debug_line    0x00014464     0x1095 ./lwip/src/core/netif.o
+ .debug_line    0x000154f9     0x1425 ./lwip/src/core/pbuf.o
+ .debug_line    0x0001691e      0xdbf ./lwip/src/core/raw.o
+ .debug_line    0x000176dd      0x834 ./lwip/src/core/sys.o
+ .debug_line    0x00017f11     0x1cc2 ./lwip/src/core/tcp.o
+ .debug_line    0x00019bd3     0x1a08 ./lwip/src/core/tcp_in.o
+ .debug_line    0x0001b5db     0x1b0f ./lwip/src/core/tcp_out.o
+ .debug_line    0x0001d0ea      0xd84 ./lwip/src/core/timeouts.o
+ .debug_line    0x0001de6e     0x110c ./lwip/src/core/udp.o
+ .debug_line    0x0001ef7a     0x198e ./lwip/src/apps/mqtt/mqtt.o
+ .debug_line    0x00020908     0x12c2 ./lwip/src/api/api_lib.o
+ .debug_line    0x00021bca     0x1c12 ./lwip/src/api/api_msg.o
+ .debug_line    0x000237dc      0xc34 ./lwip/src/api/netifapi.o
+ .debug_line    0x00024410      0xd85 ./lwip/src/api/tcpip.o
+ .debug_line    0x00025195      0xe24 ./lwip/port/enet_ethernetif.o
+ .debug_line    0x00025fb9     0x1071 ./lwip/port/enet_ethernetif_kinetis.o
+ .debug_line    0x0002702a      0xdd9 ./lwip/port/sys_arch.o
+ .debug_line    0x00027e03      0x3b2 ./freertos/freertos_kernel/portable/MemMang/heap_3.o
+ .debug_line    0x000281b5      0x678 ./freertos/freertos_kernel/portable/GCC/ARM_CM4F/port.o
+ .debug_line    0x0002882d      0x7e7 ./freertos/freertos_kernel/event_groups.o
+ .debug_line    0x00029014      0x46d ./freertos/freertos_kernel/list.o
+ .debug_line    0x00029481     0x12a5 ./freertos/freertos_kernel/queue.o
+ .debug_line    0x0002a726     0x1a0f ./freertos/freertos_kernel/tasks.o
+ .debug_line    0x0002c135      0xa31 ./freertos/freertos_kernel/timers.o
+ .debug_line    0x0002cb66     0x1920 ./drivers/fsl_clock.o
+ .debug_line    0x0002e486     0x1e53 ./drivers/fsl_enet.o
+ .debug_line    0x000302d9      0x41f ./drivers/fsl_gpio.o
+ .debug_line    0x000306f8      0xfff ./drivers/fsl_lpuart.o
+ .debug_line    0x000316f7      0x379 ./drivers/fsl_sim.o
+ .debug_line    0x00031a70     0x14c6 ./drivers/fsl_uart.o
+ .debug_line    0x00032f36      0x43b ./device/system_MK66F18.o
+ .debug_line    0x00033371      0x70a ./component/uart/fsl_adapter_uart.o
+ .debug_line    0x00033a7b      0x982 ./component/serial_manager/fsl_component_serial_manager.o
+ .debug_line    0x000343fd      0x752 ./component/serial_manager/fsl_component_serial_port_uart.o
+ .debug_line    0x00034b4f      0x70a ./board/board.o
+ .debug_line    0x00035259      0x4fe ./board/clock_config.o
+ .debug_line    0x00035757      0x52f ./board/pin_mux.o
+ .debug_line    0x00035c86       0xc4 C:/nxp/MCUXpressoIDE_11.10.0_3148/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.10.0.202311280810/tools/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libcr_nohost_nf.a(_cr__main.o)
+ .debug_line    0x00035d4a       0x9b C:/nxp/MCUXpressoIDE_11.10.0_3148/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.10.0.202311280810/tools/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libcr_c.a(memcpy.o)
+ .debug_line    0x00035de5       0x7b C:/nxp/MCUXpressoIDE_11.10.0_3148/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.10.0.202311280810/tools/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libcr_c.a(memset.o)
+ .debug_line    0x00035e60      0x37b C:/nxp/MCUXpressoIDE_11.10.0_3148/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.10.0.202311280810/tools/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libcr_c.a(alloc.o)
+ .debug_line    0x000361db      0x1ca C:/nxp/MCUXpressoIDE_11.10.0_3148/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.10.0.202311280810/tools/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libcr_c.a(ctype.o)
+ .debug_line    0x000363a5      0x152 C:/nxp/MCUXpressoIDE_11.10.0_3148/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.10.0.202311280810/tools/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libcr_c.a(initio.o)
+ .debug_line    0x000364f7       0xc9 C:/nxp/MCUXpressoIDE_11.10.0_3148/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.10.0.202311280810/tools/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libcr_c.a(memcmp.o)
+ .debug_line    0x000365c0     0x1070 C:/nxp/MCUXpressoIDE_11.10.0_3148/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.10.0.202311280810/tools/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libcr_c.a(printf.o)
+ .debug_line    0x00037630       0xed C:/nxp/MCUXpressoIDE_11.10.0_3148/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.10.0.202311280810/tools/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libcr_c.a(setvbuf.o)
+ .debug_line    0x0003771d       0xaf C:/nxp/MCUXpressoIDE_11.10.0_3148/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.10.0.202311280810/tools/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libcr_c.a(strcpy.o)
+ .debug_line    0x000377cc      0x109 C:/nxp/MCUXpressoIDE_11.10.0_3148/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.10.0.202311280810/tools/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libcr_c.a(strlen.o)
+ .debug_line    0x000378d5       0x59 C:/nxp/MCUXpressoIDE_11.10.0_3148/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.10.0.202311280810/tools/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libcr_c.a(__init_alloc.o)
+ .debug_line    0x0003792e       0xf6 C:/nxp/MCUXpressoIDE_11.10.0_3148/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.10.0.202311280810/tools/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libcr_c.a(_cr_sbrk.o)
+ .debug_line    0x00037a24      0x2dd C:/nxp/MCUXpressoIDE_11.10.0_3148/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.10.0.202311280810/tools/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libcr_c.a(_deferredlazyseek.o)
+ .debug_line    0x00037d01      0x11c C:/nxp/MCUXpressoIDE_11.10.0_3148/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.10.0.202311280810/tools/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libcr_c.a(_fdopen.o)
+ .debug_line    0x00037e1d      0x121 C:/nxp/MCUXpressoIDE_11.10.0_3148/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.10.0.202311280810/tools/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libcr_c.a(_fflush.o)
+ .debug_line    0x00037f3e      0x125 C:/nxp/MCUXpressoIDE_11.10.0_3148/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.10.0.202311280810/tools/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libcr_c.a(_writebuf.o)
+ .debug_line    0x00038063      0x107 C:/nxp/MCUXpressoIDE_11.10.0_3148/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.10.0.202311280810/tools/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libcr_c.a(fclose.o)
+ .debug_line    0x0003816a       0xe3 C:/nxp/MCUXpressoIDE_11.10.0_3148/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.10.0.202311280810/tools/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libcr_c.a(fflush.o)
+ .debug_line    0x0003824d      0x225 C:/nxp/MCUXpressoIDE_11.10.0_3148/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.10.0.202311280810/tools/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libcr_c.a(fseek.o)
+ .debug_line    0x00038472      0x105 C:/nxp/MCUXpressoIDE_11.10.0_3148/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.10.0.202311280810/tools/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libcr_c.a(ftell.o)
+ .debug_line    0x00038577       0xec C:/nxp/MCUXpressoIDE_11.10.0_3148/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.10.0.202311280810/tools/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libcr_c.a(remove.o)
+ .debug_line    0x00038663       0x61 C:/nxp/MCUXpressoIDE_11.10.0_3148/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.10.0.202311280810/tools/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libcr_c.a(_cr_check_heap.o)
+ .debug_line    0x000386c4       0xf6 C:/nxp/MCUXpressoIDE_11.10.0_3148/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.10.0.202311280810/tools/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libcr_c.a(_do_fflush.o)
+ .debug_line    0x000387ba       0xea C:/nxp/MCUXpressoIDE_11.10.0_3148/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.10.0.202311280810/tools/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libcr_nohost_nf.a(__ciob.o)
+ .debug_line    0x000388a4       0x4e C:/nxp/MCUXpressoIDE_11.10.0_3148/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.10.0.202311280810/tools/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libcr_nohost_nf.a(__sys_appexit.o)
+ .debug_line    0x000388f2       0x4e C:/nxp/MCUXpressoIDE_11.10.0_3148/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.10.0.202311280810/tools/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libcr_nohost_nf.a(__sys_close.o)
+ .debug_line    0x00038940       0x4d C:/nxp/MCUXpressoIDE_11.10.0_3148/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.10.0.202311280810/tools/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libcr_nohost_nf.a(__sys_flen.o)
+ .debug_line    0x0003898d       0x4e C:/nxp/MCUXpressoIDE_11.10.0_3148/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.10.0.202311280810/tools/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libcr_nohost_nf.a(__sys_istty.o)
+ .debug_line    0x000389db       0x4f C:/nxp/MCUXpressoIDE_11.10.0_3148/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.10.0.202311280810/tools/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libcr_nohost_nf.a(__sys_remove.o)
+ .debug_line    0x00038a2a       0x4d C:/nxp/MCUXpressoIDE_11.10.0_3148/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.10.0.202311280810/tools/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libcr_nohost_nf.a(__sys_seek.o)
+ .debug_line    0x00038a77       0x4f C:/nxp/MCUXpressoIDE_11.10.0_3148/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.10.0.202311280810/tools/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libcr_nohost_nf.a(__sys_tmpnam.o)
+ .debug_line    0x00038ac6       0x4e C:/nxp/MCUXpressoIDE_11.10.0_3148/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.10.0.202311280810/tools/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libcr_nohost_nf.a(__sys_write.o)
 
 .debug_str      0x00000000    0xe18f3
  .debug_str     0x00000000    0xe18f3 ./utilities/fsl_assert.o
@@ -19393,11 +19409,11 @@ LOAD linker stubs
  .debug_str     0x000e18f3    0xbc821 ./utilities/fsl_debug_console.o
  .debug_str     0x000e18f3    0xb5f29 ./utilities/fsl_str.o
  .debug_str     0x000e18f3     0x3a16 ./startup/startup_mk66f18.o
- .debug_str     0x000e18f3    0xca7a4 ./source/driversP/mqtt/matt.o
+ .debug_str     0x000e18f3    0xca876 ./source/driversP/mqtt/matt.o
  .debug_str     0x000e18f3    0xca422 ./source/driversP/UART/uart_d.o
- .debug_str     0x000e18f3    0xca4fe ./source/driversP/GPIO/GPIO.o
+ .debug_str     0x000e18f3    0xca5d0 ./source/driversP/GPIO/GPIO.o
  .debug_str     0x000e18f3    0xb5031 ./source/lwip_mqtt_id_sim.o
- .debug_str     0x000e18f3    0xc9cc7 ./source/main.o
+ .debug_str     0x000e18f3    0xc9d4b ./source/main.o
  .debug_str     0x000e18f3     0x2ffe ./source/semihost_hardfault.o
  .debug_str     0x000e18f3    0xb62fa ./phy/fsl_phyksz8081.o
  .debug_str     0x000e18f3    0xb6be7 ./mdio/fsl_enet_mdio.o

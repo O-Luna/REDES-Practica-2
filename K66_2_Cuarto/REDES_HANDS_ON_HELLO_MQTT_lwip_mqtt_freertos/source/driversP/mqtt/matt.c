@@ -1,6 +1,4 @@
-
 #include "driversP/mqtt/mqtt.h"
-#include "driversP/GPIO/GPIO.h"
 
 /*******************************************************************************
  * Prototypes

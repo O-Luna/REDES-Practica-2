@@ -40,6 +40,9 @@
 #include "fsl_phyksz8081.h"
 #include "fsl_enet_mdio.h"
 #include "fsl_device_registers.h"
+
+#include "driversP/GPIO/GPIO.h"
+#include "driversP/UART/uart_d.h"
 /*******************************************************************************
  * Definitions
  ******************************************************************************/
@@ -98,6 +101,12 @@ static const struct mqtt_connect_client_info_t mqtt_client_info = {
     .tls_config = NULL,
 #endif
 };
+
+typedef struct {
+	const char *topic;
+	const char *message;
+} mqtt_args_t;
+
 
 
 /* Functions */
