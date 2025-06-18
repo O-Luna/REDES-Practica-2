@@ -5,7 +5,7 @@
  * Generated linker script file for MK66FN2M0xxx18
  * Created from linkscript.ldt by FMCreateLinkLibraries
  * Using Freemarker v2.3.30
- * MCUXpresso IDE v11.10.0 [Build 3148] [2024-07-03] on 16 jun. 2025 00:31:17
+ * MCUXpresso IDE v11.10.0 [Build 3148] [2024-07-03] on 17 jun. 2025 19:22:03
  */
 
 INCLUDE "REDES_HANDS_ON_HELLO_MQTT_lwip_mqtt_freertos_Debug_library.ld"

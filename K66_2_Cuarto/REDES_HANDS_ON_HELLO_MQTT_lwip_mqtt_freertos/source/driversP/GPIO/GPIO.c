@@ -27,7 +27,7 @@ static void button_task_sw3(void *arg)
 		if (xSemaphoreTake(xButtonSemaphore, portMAX_DELAY) == pdTRUE) {
 			// Aquí puedes crear la tarea que publica MQTT
 			mqtt_args_t *params = pvPortMalloc(sizeof(mqtt_args_t));
-			params->topic = "lwip_topic/abuela/prueba";
+			params->topic = "hoa/cuarto/prueba";
 			params->message = "ayuda";
 
 			sys_thread_new("publish", pre_publish, (void *)params, 512, 3);
@@ -43,7 +43,7 @@ static void button_task_sw2(void *arg)
 		if (xSemaphoreTake(xButtonSemaphore2, portMAX_DELAY) == pdTRUE) {
 			// Aquí puedes crear la tarea que publica MQTT
 			mqtt_args_t *params = pvPortMalloc(sizeof(mqtt_args_t));
-			params->topic = "lwip_topic/abuela/prueba";
+			params->topic = "hoa/cuarto/prueba";
 			params->message = "comunicar";
 
 			sys_thread_new("publish", pre_publish, (void *)params, 512, 3);

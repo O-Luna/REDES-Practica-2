@@ -15083,7 +15083,7 @@ END GROUP
                 0x14001000                        __top_FLEX_RAM = 0x14001000
                 0x14001000                        __top_RAM3 = 0x14001000
 
-.text           0x00000000    0x1f2a8
+.text           0x00000000    0x1f2a0
  FILL mask 0xff
                 0x00000000                        __vectors_start__ = ABSOLUTE (.)
  *(SORT_BY_ALIGNMENT(.isr_vector))
@@ -15093,13 +15093,13 @@ END GROUP
                 0x000001d0                        . = ALIGN (0x4)
                 0x000001d0                        __section_table_start = .
                 0x000001d0                        __data_section_table = .
-                0x000001d0        0x4 LONG 0x1f2a8 LOADADDR (.data)
+                0x000001d0        0x4 LONG 0x1f2a0 LOADADDR (.data)
                 0x000001d4        0x4 LONG 0x20000000 ADDR (.data)
                 0x000001d8        0x4 LONG 0x40 SIZEOF (.data)
-                0x000001dc        0x4 LONG 0x1f2a8 LOADADDR (.data_RAM2)
+                0x000001dc        0x4 LONG 0x1f2a0 LOADADDR (.data_RAM2)
                 0x000001e0        0x4 LONG 0x1fff0000 ADDR (.data_RAM2)
                 0x000001e4        0x4 LONG 0x0 SIZEOF (.data_RAM2)
-                0x000001e8        0x4 LONG 0x1f2a8 LOADADDR (.data_RAM3)
+                0x000001e8        0x4 LONG 0x1f2a0 LOADADDR (.data_RAM3)
                 0x000001ec        0x4 LONG 0x14000000 ADDR (.data_RAM3)
                 0x000001f0        0x4 LONG 0x0 SIZEOF (.data_RAM3)
                 0x000001f4                        __data_section_table_end = .
@@ -17229,627 +17229,627 @@ END GROUP
                 0x0001ab04                FreeRTOSDebugConfig
  *(SORT_BY_ALIGNMENT(.rodata) SORT_BY_ALIGNMENT(.rodata.*) SORT_BY_ALIGNMENT(.constdata) SORT_BY_ALIGNMENT(.constdata.*))
  .rodata.__assertion_failed.str1.4
-                0x0001ab1c     0x433d ./utilities/fsl_assert.o
+                0x0001ab1c     0x4335 ./utilities/fsl_assert.o
                                  0x14 (size before relaxing)
- *fill*         0x0001ee59        0x3 ff
+ *fill*         0x0001ee51        0x3 ff
  .rodata.mqtt_client_info
-                0x0001ee5c       0x1c ./source/driversP/mqtt/matt.o
+                0x0001ee54       0x1c ./source/driversP/mqtt/matt.o
  .rodata.mqtt_topic_subscribed_cb.str1.4
-                0x0001ee78       0x4d ./source/driversP/mqtt/matt.o
+                0x0001ee70       0x4d ./source/driversP/mqtt/matt.o
  .rodata.mqtt_incoming_publish_cb.str1.4
-                0x0001ee78       0x29 ./source/driversP/mqtt/matt.o
+                0x0001ee70       0x29 ./source/driversP/mqtt/matt.o
  .rodata.mqtt_incoming_data_cb.str1.4
-                0x0001ee78       0x10 ./source/driversP/mqtt/matt.o
+                0x0001ee70       0x10 ./source/driversP/mqtt/matt.o
  .rodata.mqtt_subscribe_topics.str1.4
-                0x0001ee78       0x69 ./source/driversP/mqtt/matt.o
+                0x0001ee70       0x69 ./source/driversP/mqtt/matt.o
  .rodata.mqtt_connection_cb.str1.4
-                0x0001ee78       0xc2 ./source/driversP/mqtt/matt.o
+                0x0001ee70       0xc2 ./source/driversP/mqtt/matt.o
  .rodata.connect_to_mqtt.str1.4
-                0x0001ee78       0x25 ./source/driversP/mqtt/matt.o
+                0x0001ee70       0x25 ./source/driversP/mqtt/matt.o
  .rodata.mqtt_message_published_cb.str1.4
-                0x0001ee78       0x4b ./source/driversP/mqtt/matt.o
+                0x0001ee70       0x4b ./source/driversP/mqtt/matt.o
  .rodata.publish_message.str1.4
-                0x0001ee78       0x28 ./source/driversP/mqtt/matt.o
+                0x0001ee70       0x28 ./source/driversP/mqtt/matt.o
  .rodata.pre_publish.str1.4
-                0x0001ee78       0x44 ./source/driversP/mqtt/matt.o
+                0x0001ee70       0x44 ./source/driversP/mqtt/matt.o
  .rodata.app_thread.str1.4
-                0x0001ee78       0xff ./source/driversP/mqtt/matt.o
+                0x0001ee70       0xff ./source/driversP/mqtt/matt.o
  .rodata.generate_client_id.str1.4
-                0x0001ee78       0x32 ./source/driversP/mqtt/matt.o
+                0x0001ee70       0x32 ./source/driversP/mqtt/matt.o
  .rodata.stack_init.str1.4
-                0x0001ee78       0xd0 ./source/driversP/mqtt/matt.o
- .rodata        0x0001ee78        0xc ./source/driversP/mqtt/matt.o
+                0x0001ee70       0xd0 ./source/driversP/mqtt/matt.o
+ .rodata        0x0001ee70        0xc ./source/driversP/mqtt/matt.o
  .rodata.mqtt_init.str1.4
-                0x0001ee84       0x26 ./source/driversP/mqtt/matt.o
+                0x0001ee7c       0x26 ./source/driversP/mqtt/matt.o
  .rodata.str1.4
-                0x0001ee84       0x29 ./source/driversP/mqtt/matt.o
+                0x0001ee7c       0x21 ./source/driversP/mqtt/matt.o
  .rodata.button_driver_init.str1.4
-                0x0001ee84       0x18 ./source/driversP/GPIO/GPIO.o
+                0x0001ee7c       0x18 ./source/driversP/GPIO/GPIO.o
  .rodata.button_task_sw3.str1.4
-                0x0001ee84       0x2c ./source/driversP/GPIO/GPIO.o
+                0x0001ee7c       0x24 ./source/driversP/GPIO/GPIO.o
  .rodata.button_task_sw2.str1.4
-                0x0001ee84        0xa ./source/driversP/GPIO/GPIO.o
+                0x0001ee7c        0xa ./source/driversP/GPIO/GPIO.o
  .rodata.phyksz8081_ops
-                0x0001ee84       0x20 ./phy/fsl_phyksz8081.o
-                0x0001ee84                phyksz8081_ops
+                0x0001ee7c       0x20 ./phy/fsl_phyksz8081.o
+                0x0001ee7c                phyksz8081_ops
  .rodata.PHY_KSZ8081_Init.str1.4
-                0x0001eea4       0x37 ./phy/fsl_phyksz8081.o
+                0x0001ee9c       0x37 ./phy/fsl_phyksz8081.o
  .rodata.PHY_KSZ8081_GetAutoNegotiationStatus.str1.4
-                0x0001eea4       0x1e ./phy/fsl_phyksz8081.o
+                0x0001ee9c       0x1e ./phy/fsl_phyksz8081.o
  .rodata.PHY_KSZ8081_GetLinkStatus.str1.4
-                0x0001eea4       0x1e ./phy/fsl_phyksz8081.o
+                0x0001ee9c       0x1e ./phy/fsl_phyksz8081.o
  .rodata.PHY_KSZ8081_GetLinkSpeedDuplex.str1.4
-                0x0001eea4       0x3e ./phy/fsl_phyksz8081.o
+                0x0001ee9c       0x3e ./phy/fsl_phyksz8081.o
  .rodata.PHY_KSZ8081_SetLinkSpeedDuplex.str1.4
-                0x0001eea4       0x2f ./phy/fsl_phyksz8081.o
+                0x0001ee9c       0x2f ./phy/fsl_phyksz8081.o
  .rodata.PHY_KSZ8081_EnableLoopback.str1.4
-                0x0001eea4       0x8f ./phy/fsl_phyksz8081.o
+                0x0001ee9c       0x8f ./phy/fsl_phyksz8081.o
  .rodata.enet_ops
-                0x0001eea4       0x14 ./mdio/fsl_enet_mdio.o
-                0x0001eea4                enet_ops
+                0x0001ee9c       0x14 ./mdio/fsl_enet_mdio.o
+                0x0001ee9c                enet_ops
  .rodata.ENET_MDIO_Read.str1.4
-                0x0001eeb8       0x25 ./mdio/fsl_enet_mdio.o
+                0x0001eeb0       0x25 ./mdio/fsl_enet_mdio.o
  .rodata.ENET_MDIO_ReadExt.str1.4
-                0x0001eeb8       0x26 ./mdio/fsl_enet_mdio.o
+                0x0001eeb0       0x26 ./mdio/fsl_enet_mdio.o
  .rodata.ethbroadcast
-                0x0001eeb8        0x6 ./lwip/src/netif/ethernet.o
-                0x0001eeb8                ethbroadcast
- *fill*         0x0001eebe        0x2 ff
+                0x0001eeb0        0x6 ./lwip/src/netif/ethernet.o
+                0x0001eeb0                ethbroadcast
+ *fill*         0x0001eeb6        0x2 ff
  .rodata.ethzero
-                0x0001eec0        0x6 ./lwip/src/netif/ethernet.o
-                0x0001eec0                ethzero
+                0x0001eeb8        0x6 ./lwip/src/netif/ethernet.o
+                0x0001eeb8                ethzero
  .rodata.ethernet_output.str1.4
-                0x0001eec6       0x31 ./lwip/src/netif/ethernet.o
+                0x0001eebe       0x31 ./lwip/src/netif/ethernet.o
  .rodata.dhcp_inc_pcb_refcount.str1.4
-                0x0001eec6       0x25 ./lwip/src/core/ipv4/dhcp.o
+                0x0001eebe       0x25 ./lwip/src/core/ipv4/dhcp.o
  .rodata.dhcp_dec_pcb_refcount.str1.4
-                0x0001eec6       0x24 ./lwip/src/core/ipv4/dhcp.o
+                0x0001eebe       0x24 ./lwip/src/core/ipv4/dhcp.o
  .rodata.dhcp_select.str1.4
-                0x0001eec6       0x3a ./lwip/src/core/ipv4/dhcp.o
+                0x0001eebe       0x3a ./lwip/src/core/ipv4/dhcp.o
  .rodata.dhcp_set_struct.str1.4
-                0x0001eec6       0x44 ./lwip/src/core/ipv4/dhcp.o
+                0x0001eebe       0x44 ./lwip/src/core/ipv4/dhcp.o
  .rodata.dhcp_start.str1.4
-                0x0001eec6       0x21 ./lwip/src/core/ipv4/dhcp.o
+                0x0001eebe       0x21 ./lwip/src/core/ipv4/dhcp.o
  .rodata.dhcp_bind.str1.4
-                0x0001eec6       0x34 ./lwip/src/core/ipv4/dhcp.o
+                0x0001eebe       0x34 ./lwip/src/core/ipv4/dhcp.o
  .rodata.dhcp_option.str1.4
-                0x0001eec6       0x42 ./lwip/src/core/ipv4/dhcp.o
+                0x0001eebe       0x42 ./lwip/src/core/ipv4/dhcp.o
  .rodata.dhcp_option_byte.str1.4
-                0x0001eec6       0x35 ./lwip/src/core/ipv4/dhcp.o
+                0x0001eebe       0x35 ./lwip/src/core/ipv4/dhcp.o
  .rodata.dhcp_option_short.str1.4
-                0x0001eec6       0x3b ./lwip/src/core/ipv4/dhcp.o
+                0x0001eebe       0x3b ./lwip/src/core/ipv4/dhcp.o
  .rodata.dhcp_option_long.str1.4
-                0x0001eec6       0x3a ./lwip/src/core/ipv4/dhcp.o
+                0x0001eebe       0x3a ./lwip/src/core/ipv4/dhcp.o
  .rodata.dhcp_parse_reply.str1.4
-                0x0001eec6       0x11 ./lwip/src/core/ipv4/dhcp.o
+                0x0001eebe       0x11 ./lwip/src/core/ipv4/dhcp.o
  .rodata.dhcp_create_msg.str1.4
-                0x0001eec6       0x80 ./lwip/src/core/ipv4/dhcp.o
+                0x0001eebe       0x80 ./lwip/src/core/ipv4/dhcp.o
  .rodata.etharp_find_entry.str1.4
-                0x0001eec6       0x95 ./lwip/src/core/ipv4/etharp.o
+                0x0001eebe       0x95 ./lwip/src/core/ipv4/etharp.o
  .rodata.etharp_update_arp_entry.str1.4
-                0x0001eec6       0x24 ./lwip/src/core/ipv4/etharp.o
+                0x0001eebe       0x24 ./lwip/src/core/ipv4/etharp.o
  .rodata.etharp_get_entry.str1.4
-                0x0001eec6       0x30 ./lwip/src/core/ipv4/etharp.o
+                0x0001eebe       0x30 ./lwip/src/core/ipv4/etharp.o
  .rodata.etharp_input.str1.4
-                0x0001eec6        0x3 ./lwip/src/core/ipv4/etharp.o
+                0x0001eebe        0x3 ./lwip/src/core/ipv4/etharp.o
  .rodata.etharp_output_to_arp_index.str1.4
-                0x0001eec6       0x30 ./lwip/src/core/ipv4/etharp.o
+                0x0001eebe       0x30 ./lwip/src/core/ipv4/etharp.o
  .rodata.etharp_output.str1.4
-                0x0001eec6        0xa ./lwip/src/core/ipv4/etharp.o
+                0x0001eebe        0xa ./lwip/src/core/ipv4/etharp.o
  .rodata.etharp_query.str1.4
-                0x0001eec6       0x52 ./lwip/src/core/ipv4/etharp.o
+                0x0001eebe       0x52 ./lwip/src/core/ipv4/etharp.o
  .rodata.etharp_raw.str1.4
-                0x0001eec6       0x75 ./lwip/src/core/ipv4/etharp.o
+                0x0001eebe       0x75 ./lwip/src/core/ipv4/etharp.o
  .rodata.icmp_input.str1.4
-                0x0001eec6       0x65 ./lwip/src/core/ipv4/icmp.o
+                0x0001eebe       0x65 ./lwip/src/core/ipv4/icmp.o
  .rodata.icmp_send_response.str1.4
-                0x0001eec6       0x2c ./lwip/src/core/ipv4/icmp.o
+                0x0001eebe       0x2c ./lwip/src/core/ipv4/icmp.o
  .rodata.ip4_output_if_src.str1.4
-                0x0001eec6       0x39 ./lwip/src/core/ipv4/ip4.o
- *fill*         0x0001eec6        0x2 ff
+                0x0001eebe       0x39 ./lwip/src/core/ipv4/ip4.o
+ *fill*         0x0001eebe        0x2 ff
  .rodata.ip_addr_any
-                0x0001eec8        0x4 ./lwip/src/core/ipv4/ip4_addr.o
-                0x0001eec8                ip_addr_any
+                0x0001eec0        0x4 ./lwip/src/core/ipv4/ip4_addr.o
+                0x0001eec0                ip_addr_any
  .rodata.ip_addr_broadcast
-                0x0001eecc        0x4 ./lwip/src/core/ipv4/ip4_addr.o
-                0x0001eecc                ip_addr_broadcast
+                0x0001eec4        0x4 ./lwip/src/core/ipv4/ip4_addr.o
+                0x0001eec4                ip_addr_broadcast
  .rodata.ip4addr_aton.str1.4
-                0x0001eed0        0xa ./lwip/src/core/ipv4/ip4_addr.o
+                0x0001eec8        0xa ./lwip/src/core/ipv4/ip4_addr.o
  .rodata.ip_reass_free_complete_datagram.str1.4
-                0x0001eed0       0x62 ./lwip/src/core/ipv4/ip4_frag.o
+                0x0001eec8       0x62 ./lwip/src/core/ipv4/ip4_frag.o
  .rodata.ip_reass_dequeue_datagram.str1.4
-                0x0001eed0       0x19 ./lwip/src/core/ipv4/ip4_frag.o
+                0x0001eec8       0x19 ./lwip/src/core/ipv4/ip4_frag.o
  .rodata.ip_reass_chain_frag_into_datagram_and_validate.str1.4
-                0x0001eed0       0x8a ./lwip/src/core/ipv4/ip4_frag.o
+                0x0001eec8       0x8a ./lwip/src/core/ipv4/ip4_frag.o
  .rodata.ip4_reass.str1.4
-                0x0001eed0       0x48 ./lwip/src/core/ipv4/ip4_frag.o
+                0x0001eec8       0x48 ./lwip/src/core/ipv4/ip4_frag.o
  .rodata.ip_frag_free_pbuf_custom_ref.str1.4
-                0x0001eed0        0xa ./lwip/src/core/ipv4/ip4_frag.o
+                0x0001eec8        0xa ./lwip/src/core/ipv4/ip4_frag.o
  .rodata.ipfrag_free_pbuf_custom.str1.4
-                0x0001eed0       0x15 ./lwip/src/core/ipv4/ip4_frag.o
+                0x0001eec8       0x15 ./lwip/src/core/ipv4/ip4_frag.o
  .rodata.ip4_frag.str1.4
-                0x0001eed0       0x4f ./lwip/src/core/ipv4/ip4_frag.o
+                0x0001eec8       0x4f ./lwip/src/core/ipv4/ip4_frag.o
  .rodata.dns_send.str1.4
-                0x0001eed0       0x18 ./lwip/src/core/dns.o
+                0x0001eec8       0x18 ./lwip/src/core/dns.o
  .rodata.dns_check_entry.str1.4
-                0x0001eed0       0x3b ./lwip/src/core/dns.o
+                0x0001eec8       0x3b ./lwip/src/core/dns.o
  .rodata.plug_holes.str1.4
-                0x0001eed0       0x7a ./lwip/src/core/mem.o
+                0x0001eec8       0x7a ./lwip/src/core/mem.o
  .rodata.mem_init.str1.4
-                0x0001eed0       0x1b ./lwip/src/core/mem.o
+                0x0001eec8       0x1b ./lwip/src/core/mem.o
  .rodata.mem_free.str1.4
-                0x0001eed0       0x9a ./lwip/src/core/mem.o
+                0x0001eec8       0x9a ./lwip/src/core/mem.o
  .rodata.mem_trim.str1.4
-                0x0001eed0       0x49 ./lwip/src/core/mem.o
+                0x0001eec8       0x49 ./lwip/src/core/mem.o
  .rodata.mem_malloc.str1.4
-                0x0001eed0       0x9f ./lwip/src/core/mem.o
+                0x0001eec8       0x9f ./lwip/src/core/mem.o
  .rodata.str1.4
-                0x0001eed0       0xa6 ./lwip/src/core/memp.o
+                0x0001eec8       0xa6 ./lwip/src/core/memp.o
  .rodata.memp_RAW_PCB
-                0x0001eed0       0x10 ./lwip/src/core/memp.o
-                0x0001eed0                memp_RAW_PCB
+                0x0001eec8       0x10 ./lwip/src/core/memp.o
+                0x0001eec8                memp_RAW_PCB
  .rodata.memp_UDP_PCB
-                0x0001eee0       0x10 ./lwip/src/core/memp.o
-                0x0001eee0                memp_UDP_PCB
+                0x0001eed8       0x10 ./lwip/src/core/memp.o
+                0x0001eed8                memp_UDP_PCB
  .rodata.memp_TCP_PCB
-                0x0001eef0       0x10 ./lwip/src/core/memp.o
-                0x0001eef0                memp_TCP_PCB
+                0x0001eee8       0x10 ./lwip/src/core/memp.o
+                0x0001eee8                memp_TCP_PCB
  .rodata.memp_TCP_PCB_LISTEN
-                0x0001ef00       0x10 ./lwip/src/core/memp.o
-                0x0001ef00                memp_TCP_PCB_LISTEN
+                0x0001eef8       0x10 ./lwip/src/core/memp.o
+                0x0001eef8                memp_TCP_PCB_LISTEN
  .rodata.memp_TCP_SEG
-                0x0001ef10       0x10 ./lwip/src/core/memp.o
-                0x0001ef10                memp_TCP_SEG
+                0x0001ef08       0x10 ./lwip/src/core/memp.o
+                0x0001ef08                memp_TCP_SEG
  .rodata.memp_REASSDATA
-                0x0001ef20       0x10 ./lwip/src/core/memp.o
-                0x0001ef20                memp_REASSDATA
+                0x0001ef18       0x10 ./lwip/src/core/memp.o
+                0x0001ef18                memp_REASSDATA
  .rodata.memp_FRAG_PBUF
-                0x0001ef30       0x10 ./lwip/src/core/memp.o
-                0x0001ef30                memp_FRAG_PBUF
+                0x0001ef28       0x10 ./lwip/src/core/memp.o
+                0x0001ef28                memp_FRAG_PBUF
  .rodata.memp_NETBUF
-                0x0001ef40       0x10 ./lwip/src/core/memp.o
-                0x0001ef40                memp_NETBUF
+                0x0001ef38       0x10 ./lwip/src/core/memp.o
+                0x0001ef38                memp_NETBUF
  .rodata.memp_NETCONN
-                0x0001ef50       0x10 ./lwip/src/core/memp.o
-                0x0001ef50                memp_NETCONN
+                0x0001ef48       0x10 ./lwip/src/core/memp.o
+                0x0001ef48                memp_NETCONN
  .rodata.memp_TCPIP_MSG_API
-                0x0001ef60       0x10 ./lwip/src/core/memp.o
-                0x0001ef60                memp_TCPIP_MSG_API
+                0x0001ef58       0x10 ./lwip/src/core/memp.o
+                0x0001ef58                memp_TCPIP_MSG_API
  .rodata.memp_TCPIP_MSG_INPKT
-                0x0001ef70       0x10 ./lwip/src/core/memp.o
-                0x0001ef70                memp_TCPIP_MSG_INPKT
+                0x0001ef68       0x10 ./lwip/src/core/memp.o
+                0x0001ef68                memp_TCPIP_MSG_INPKT
  .rodata.memp_SYS_TIMEOUT
-                0x0001ef80       0x10 ./lwip/src/core/memp.o
-                0x0001ef80                memp_SYS_TIMEOUT
+                0x0001ef78       0x10 ./lwip/src/core/memp.o
+                0x0001ef78                memp_SYS_TIMEOUT
  .rodata.memp_NETDB
-                0x0001ef90       0x10 ./lwip/src/core/memp.o
-                0x0001ef90                memp_NETDB
+                0x0001ef88       0x10 ./lwip/src/core/memp.o
+                0x0001ef88                memp_NETDB
  .rodata.memp_PBUF
-                0x0001efa0       0x10 ./lwip/src/core/memp.o
-                0x0001efa0                memp_PBUF
+                0x0001ef98       0x10 ./lwip/src/core/memp.o
+                0x0001ef98                memp_PBUF
  .rodata.memp_PBUF_POOL
-                0x0001efb0       0x10 ./lwip/src/core/memp.o
-                0x0001efb0                memp_PBUF_POOL
+                0x0001efa8       0x10 ./lwip/src/core/memp.o
+                0x0001efa8                memp_PBUF_POOL
  .rodata.memp_pools
-                0x0001efc0       0x3c ./lwip/src/core/memp.o
-                0x0001efc0                memp_pools
+                0x0001efb8       0x3c ./lwip/src/core/memp.o
+                0x0001efb8                memp_pools
  .rodata.do_memp_malloc_pool.str1.4
-                0x0001effc       0x23 ./lwip/src/core/memp.o
+                0x0001eff4       0x23 ./lwip/src/core/memp.o
  .rodata.memp_malloc.str1.4
-                0x0001effc       0x23 ./lwip/src/core/memp.o
+                0x0001eff4       0x23 ./lwip/src/core/memp.o
  .rodata.do_memp_free_pool.str1.4
-                0x0001effc       0x20 ./lwip/src/core/memp.o
+                0x0001eff4       0x20 ./lwip/src/core/memp.o
  .rodata.memp_free.str1.4
-                0x0001effc       0x1b ./lwip/src/core/memp.o
+                0x0001eff4       0x1b ./lwip/src/core/memp.o
  .rodata.netif_add.str1.4
-                0x0001effc       0x86 ./lwip/src/core/netif.o
+                0x0001eff4       0x86 ./lwip/src/core/netif.o
  .rodata.netif_do_set_ipaddr.str1.4
-                0x0001effc       0x10 ./lwip/src/core/netif.o
+                0x0001eff4       0x10 ./lwip/src/core/netif.o
  .rodata.netif_set_up.str1.4
-                0x0001effc       0x1c ./lwip/src/core/netif.o
+                0x0001eff4       0x1c ./lwip/src/core/netif.o
  .rodata.netif_issue_reports.str1.4
-                0x0001effc       0x23 ./lwip/src/core/netif.o
+                0x0001eff4       0x23 ./lwip/src/core/netif.o
  .rodata.pbuf_alloc.str1.4
-                0x0001effc       0xab ./lwip/src/core/pbuf.o
+                0x0001eff4       0xab ./lwip/src/core/pbuf.o
  .rodata.pbuf_alloc_reference.str1.4
-                0x0001effc       0x12 ./lwip/src/core/pbuf.o
+                0x0001eff4       0x12 ./lwip/src/core/pbuf.o
  .rodata.pbuf_realloc.str1.4
-                0x0001effc       0x65 ./lwip/src/core/pbuf.o
+                0x0001eff4       0x65 ./lwip/src/core/pbuf.o
  .rodata.pbuf_add_header_impl.str1.4
-                0x0001effc        0xa ./lwip/src/core/pbuf.o
+                0x0001eff4        0xa ./lwip/src/core/pbuf.o
  .rodata.pbuf_remove_header.str1.4
-                0x0001effc       0x23 ./lwip/src/core/pbuf.o
+                0x0001eff4       0x23 ./lwip/src/core/pbuf.o
  .rodata.pbuf_free.str1.4
-                0x0001effc       0x4e ./lwip/src/core/pbuf.o
+                0x0001eff4       0x4e ./lwip/src/core/pbuf.o
  .rodata.pbuf_ref.str1.4
-                0x0001effc       0x12 ./lwip/src/core/pbuf.o
+                0x0001eff4       0x12 ./lwip/src/core/pbuf.o
  .rodata.pbuf_cat.str1.4
-                0x0001effc       0x78 ./lwip/src/core/pbuf.o
+                0x0001eff4       0x78 ./lwip/src/core/pbuf.o
  .rodata.pbuf_copy.str1.4
-                0x0001effc       0x1a ./lwip/src/core/pbuf.o
+                0x0001eff4       0x1a ./lwip/src/core/pbuf.o
  .rodata.pbuf_copy_partial_pbuf.str1.4
-                0x0001effc       0xef ./lwip/src/core/pbuf.o
+                0x0001eff4       0xef ./lwip/src/core/pbuf.o
  .rodata.pbuf_copy_partial.str1.4
-                0x0001effc       0x43 ./lwip/src/core/pbuf.o
+                0x0001eff4       0x43 ./lwip/src/core/pbuf.o
  .rodata.pbuf_get_contiguous.str1.4
-                0x0001effc       0x49 ./lwip/src/core/pbuf.o
+                0x0001eff4       0x49 ./lwip/src/core/pbuf.o
  .rodata.pbuf_take.str1.4
-                0x0001effc       0x82 ./lwip/src/core/pbuf.o
+                0x0001eff4       0x82 ./lwip/src/core/pbuf.o
  .rodata.pbuf_take_at.str1.4
-                0x0001effc       0x17 ./lwip/src/core/pbuf.o
+                0x0001eff4       0x17 ./lwip/src/core/pbuf.o
  .rodata.pbuf_clone.str1.4
-                0x0001effc       0x11 ./lwip/src/core/pbuf.o
+                0x0001eff4       0x11 ./lwip/src/core/pbuf.o
  .rodata.raw_input.str1.4
-                0x0001effc       0x49 ./lwip/src/core/raw.o
+                0x0001eff4       0x49 ./lwip/src/core/raw.o
  .rodata.tcp_backoff
-                0x0001effc        0xd ./lwip/src/core/tcp.o
- *fill*         0x0001f009        0x3 ff
+                0x0001eff4        0xd ./lwip/src/core/tcp.o
+ *fill*         0x0001f001        0x3 ff
  .rodata.tcp_persist_backoff
-                0x0001f00c        0x7 ./lwip/src/core/tcp.o
- *fill*         0x0001f013        0x1 ff
+                0x0001f004        0x7 ./lwip/src/core/tcp.o
+ *fill*         0x0001f00b        0x1 ff
  .rodata.tcp_pcb_lists
-                0x0001f014       0x10 ./lwip/src/core/tcp.o
-                0x0001f014                tcp_pcb_lists
+                0x0001f00c       0x10 ./lwip/src/core/tcp.o
+                0x0001f00c                tcp_pcb_lists
  .rodata.tcp_free.str1.4
-                0x0001f024       0x11 ./lwip/src/core/tcp.o
+                0x0001f01c       0x11 ./lwip/src/core/tcp.o
  .rodata.tcp_free_listen.str1.4
-                0x0001f024       0x19 ./lwip/src/core/tcp.o
+                0x0001f01c       0x19 ./lwip/src/core/tcp.o
  .rodata.tcp_remove_listener.str1.4
-                0x0001f024       0x26 ./lwip/src/core/tcp.o
+                0x0001f01c       0x26 ./lwip/src/core/tcp.o
  .rodata.tcp_listen_closed.str1.4
-                0x0001f024       0x21 ./lwip/src/core/tcp.o
+                0x0001f01c       0x21 ./lwip/src/core/tcp.o
  .rodata.tcp_backlog_delayed.str1.4
-                0x0001f024       0x15 ./lwip/src/core/tcp.o
+                0x0001f01c       0x15 ./lwip/src/core/tcp.o
  .rodata.tcp_close_shutdown.str1.4
-                0x0001f024       0x39 ./lwip/src/core/tcp.o
+                0x0001f01c       0x39 ./lwip/src/core/tcp.o
  .rodata.tcp_close.str1.4
-                0x0001f024       0x1b ./lwip/src/core/tcp.o
+                0x0001f01c       0x1b ./lwip/src/core/tcp.o
  .rodata.tcp_abandon.str1.4
-                0x0001f024       0x4d ./lwip/src/core/tcp.o
+                0x0001f01c       0x4d ./lwip/src/core/tcp.o
  .rodata.tcp_bind.str1.4
-                0x0001f024       0x40 ./lwip/src/core/tcp.o
+                0x0001f01c       0x40 ./lwip/src/core/tcp.o
  .rodata.tcp_update_rcv_ann_wnd.str1.4
-                0x0001f024       0x3e ./lwip/src/core/tcp.o
+                0x0001f01c       0x3e ./lwip/src/core/tcp.o
  .rodata.tcp_recved.str1.4
-                0x0001f024       0x3e ./lwip/src/core/tcp.o
+                0x0001f01c       0x3e ./lwip/src/core/tcp.o
  .rodata.tcp_connect.str1.4
-                0x0001f024       0x68 ./lwip/src/core/tcp.o
+                0x0001f01c       0x68 ./lwip/src/core/tcp.o
  .rodata.tcp_slowtmr.str1.4
-                0x0001f024      0x1c6 ./lwip/src/core/tcp.o
+                0x0001f01c      0x1c6 ./lwip/src/core/tcp.o
  .rodata.tcp_process_refused_data.str1.4
-                0x0001f024       0x26 ./lwip/src/core/tcp.o
+                0x0001f01c       0x26 ./lwip/src/core/tcp.o
  .rodata.tcp_recv_null.str1.4
-                0x0001f024       0x1b ./lwip/src/core/tcp.o
+                0x0001f01c       0x1b ./lwip/src/core/tcp.o
  .rodata.tcp_kill_state.str1.4
-                0x0001f024        0xe ./lwip/src/core/tcp.o
+                0x0001f01c        0xe ./lwip/src/core/tcp.o
  .rodata.tcp_recv.str1.4
-                0x0001f024       0x27 ./lwip/src/core/tcp.o
+                0x0001f01c       0x27 ./lwip/src/core/tcp.o
  .rodata.tcp_sent.str1.4
-                0x0001f024       0x27 ./lwip/src/core/tcp.o
+                0x0001f01c       0x27 ./lwip/src/core/tcp.o
  .rodata.tcp_err.str1.4
-                0x0001f024       0x26 ./lwip/src/core/tcp.o
+                0x0001f01c       0x26 ./lwip/src/core/tcp.o
  .rodata.tcp_poll.str1.4
-                0x0001f024       0x36 ./lwip/src/core/tcp.o
+                0x0001f01c       0x36 ./lwip/src/core/tcp.o
  .rodata.tcp_pcb_purge.str1.4
-                0x0001f024       0x1b ./lwip/src/core/tcp.o
+                0x0001f01c       0x1b ./lwip/src/core/tcp.o
  .rodata.tcp_pcb_remove.str1.4
-                0x0001f024       0x6d ./lwip/src/core/tcp.o
+                0x0001f01c       0x6d ./lwip/src/core/tcp.o
  .rodata.tcp_next_iss.str1.4
-                0x0001f024       0x1a ./lwip/src/core/tcp.o
+                0x0001f01c       0x1a ./lwip/src/core/tcp.o
  .rodata.tcp_eff_send_mss_netif.str1.4
-                0x0001f024       0x27 ./lwip/src/core/tcp.o
+                0x0001f01c       0x27 ./lwip/src/core/tcp.o
  .rodata.tcp_netif_ip_addr_changed_pcblist.str1.4
-                0x0001f024       0x34 ./lwip/src/core/tcp.o
+                0x0001f01c       0x34 ./lwip/src/core/tcp.o
  .rodata.tcp_input.str1.4
-                0x0001f024      0x172 ./lwip/src/core/tcp_in.o
+                0x0001f01c      0x172 ./lwip/src/core/tcp_in.o
  .rodata.tcp_input_delayed_close.str1.4
-                0x0001f024       0x25 ./lwip/src/core/tcp_in.o
+                0x0001f01c       0x25 ./lwip/src/core/tcp_in.o
  .rodata.tcp_listen_input.str1.4
-                0x0001f024       0x1e ./lwip/src/core/tcp_in.o
+                0x0001f01c       0x1e ./lwip/src/core/tcp_in.o
  .rodata.tcp_timewait_input.str1.4
-                0x0001f024       0x20 ./lwip/src/core/tcp_in.o
+                0x0001f01c       0x20 ./lwip/src/core/tcp_in.o
  .rodata.tcp_process.str1.4
-                0x0001f024       0x86 ./lwip/src/core/tcp_in.o
+                0x0001f01c       0x86 ./lwip/src/core/tcp_in.o
  .rodata.tcp_free_acked_segments.str1.4
-                0x0001f024       0x48 ./lwip/src/core/tcp_in.o
+                0x0001f01c       0x48 ./lwip/src/core/tcp_in.o
  .rodata.tcp_receive.str1.4
-                0x0001f024       0xce ./lwip/src/core/tcp_in.o
+                0x0001f01c       0xce ./lwip/src/core/tcp_in.o
  .rodata.tcp_parseopt.str1.4
-                0x0001f024       0x1a ./lwip/src/core/tcp_in.o
+                0x0001f01c       0x1a ./lwip/src/core/tcp_in.o
  .rodata.tcp_create_segment.str1.4
-                0x0001f024       0x59 ./lwip/src/core/tcp_out.o
+                0x0001f01c       0x59 ./lwip/src/core/tcp_out.o
  .rodata.tcp_pbuf_prealloc.str1.4
-                0x0001f024       0x58 ./lwip/src/core/tcp_out.o
+                0x0001f01c       0x58 ./lwip/src/core/tcp_out.o
  .rodata.tcp_write_checks.str1.4
-                0x0001f024       0x8e ./lwip/src/core/tcp_out.o
+                0x0001f01c       0x8e ./lwip/src/core/tcp_out.o
  .rodata.tcp_write.str1.4
-                0x0001f024      0x252 ./lwip/src/core/tcp_out.o
+                0x0001f01c      0x252 ./lwip/src/core/tcp_out.o
  .rodata.tcp_split_unsent_seg.str1.4
-                0x0001f024       0x74 ./lwip/src/core/tcp_out.o
+                0x0001f01c       0x74 ./lwip/src/core/tcp_out.o
  .rodata.tcp_send_fin.str1.4
-                0x0001f024       0x1a ./lwip/src/core/tcp_out.o
+                0x0001f01c       0x1a ./lwip/src/core/tcp_out.o
  .rodata.tcp_enqueue_flags.str1.4
-                0x0001f024      0x120 ./lwip/src/core/tcp_out.o
+                0x0001f01c      0x120 ./lwip/src/core/tcp_out.o
  .rodata.tcp_output.str1.4
-                0x0001f024       0x57 ./lwip/src/core/tcp_out.o
+                0x0001f01c       0x57 ./lwip/src/core/tcp_out.o
  .rodata.tcp_output_segment_busy.str1.4
-                0x0001f024       0x25 ./lwip/src/core/tcp_out.o
+                0x0001f01c       0x25 ./lwip/src/core/tcp_out.o
  .rodata.tcp_output_segment.str1.4
-                0x0001f024       0x77 ./lwip/src/core/tcp_out.o
+                0x0001f01c       0x77 ./lwip/src/core/tcp_out.o
  .rodata.tcp_rexmit_rto_prepare.str1.4
-                0x0001f024       0x24 ./lwip/src/core/tcp_out.o
+                0x0001f01c       0x24 ./lwip/src/core/tcp_out.o
  .rodata.tcp_rexmit_rto_commit.str1.4
-                0x0001f024       0x23 ./lwip/src/core/tcp_out.o
+                0x0001f01c       0x23 ./lwip/src/core/tcp_out.o
  .rodata.tcp_rexmit_rto.str1.4
-                0x0001f024       0x1c ./lwip/src/core/tcp_out.o
+                0x0001f01c       0x1c ./lwip/src/core/tcp_out.o
  .rodata.tcp_rexmit.str1.4
-                0x0001f024       0x18 ./lwip/src/core/tcp_out.o
+                0x0001f01c       0x18 ./lwip/src/core/tcp_out.o
  .rodata.tcp_rexmit_fast.str1.4
-                0x0001f024       0x1d ./lwip/src/core/tcp_out.o
+                0x0001f01c       0x1d ./lwip/src/core/tcp_out.o
  .rodata.tcp_output_alloc_header_common.str1.4
-                0x0001f024       0x2e ./lwip/src/core/tcp_out.o
+                0x0001f01c       0x2e ./lwip/src/core/tcp_out.o
  .rodata.tcp_output_alloc_header.str1.4
-                0x0001f024       0x25 ./lwip/src/core/tcp_out.o
+                0x0001f01c       0x25 ./lwip/src/core/tcp_out.o
  .rodata.tcp_output_fill_options.str1.4
-                0x0001f024       0x26 ./lwip/src/core/tcp_out.o
+                0x0001f01c       0x26 ./lwip/src/core/tcp_out.o
  .rodata.tcp_output_control_segment.str1.4
-                0x0001f024       0x29 ./lwip/src/core/tcp_out.o
+                0x0001f01c       0x29 ./lwip/src/core/tcp_out.o
  .rodata.tcp_output_control_segment_netif.str1.4
-                0x0001f024       0x31 ./lwip/src/core/tcp_out.o
+                0x0001f01c       0x31 ./lwip/src/core/tcp_out.o
  .rodata.tcp_rst_common.str1.4
-                0x0001f024       0x37 ./lwip/src/core/tcp_out.o
+                0x0001f01c       0x37 ./lwip/src/core/tcp_out.o
  .rodata.tcp_send_empty_ack.str1.4
-                0x0001f024       0x20 ./lwip/src/core/tcp_out.o
+                0x0001f01c       0x20 ./lwip/src/core/tcp_out.o
  .rodata.tcp_keepalive.str1.4
-                0x0001f024       0x1b ./lwip/src/core/tcp_out.o
+                0x0001f01c       0x1b ./lwip/src/core/tcp_out.o
  .rodata.tcp_zero_window_probe.str1.4
-                0x0001f024       0x23 ./lwip/src/core/tcp_out.o
+                0x0001f01c       0x23 ./lwip/src/core/tcp_out.o
  .rodata.lwip_cyclic_timers
-                0x0001f024       0x30 ./lwip/src/core/timeouts.o
-                0x0001f024                lwip_cyclic_timers
+                0x0001f01c       0x30 ./lwip/src/core/timeouts.o
+                0x0001f01c                lwip_cyclic_timers
  .rodata.sys_timeout_abs.str1.4
-                0x0001f054       0x3d ./lwip/src/core/timeouts.o
+                0x0001f04c       0x3d ./lwip/src/core/timeouts.o
  .rodata.sys_timeout.str1.4
-                0x0001f054       0x36 ./lwip/src/core/timeouts.o
+                0x0001f04c       0x36 ./lwip/src/core/timeouts.o
  .rodata.sys_timeouts_sleeptime.str1.4
-                0x0001f054       0x12 ./lwip/src/core/timeouts.o
+                0x0001f04c       0x12 ./lwip/src/core/timeouts.o
  .rodata.udp_input_local_match.str1.4
-                0x0001f054       0x49 ./lwip/src/core/udp.o
+                0x0001f04c       0x49 ./lwip/src/core/udp.o
  .rodata.udp_input.str1.4
-                0x0001f054       0x4e ./lwip/src/core/udp.o
+                0x0001f04c       0x4e ./lwip/src/core/udp.o
  .rodata.udp_send.str1.4
-                0x0001f054       0x33 ./lwip/src/core/udp.o
+                0x0001f04c       0x33 ./lwip/src/core/udp.o
  .rodata.udp_sendto.str1.4
-                0x0001f054       0x4f ./lwip/src/core/udp.o
+                0x0001f04c       0x4f ./lwip/src/core/udp.o
  .rodata.udp_sendto_if.str1.4
-                0x0001f054       0x75 ./lwip/src/core/udp.o
+                0x0001f04c       0x75 ./lwip/src/core/udp.o
  .rodata.udp_sendto_if_src.str1.4
-                0x0001f054       0xda ./lwip/src/core/udp.o
+                0x0001f04c       0xda ./lwip/src/core/udp.o
  .rodata.udp_bind.str1.4
-                0x0001f054       0x16 ./lwip/src/core/udp.o
+                0x0001f04c       0x16 ./lwip/src/core/udp.o
  .rodata.udp_connect.str1.4
-                0x0001f054       0x38 ./lwip/src/core/udp.o
+                0x0001f04c       0x38 ./lwip/src/core/udp.o
  .rodata.udp_recv.str1.4
-                0x0001f054       0x16 ./lwip/src/core/udp.o
+                0x0001f04c       0x16 ./lwip/src/core/udp.o
  .rodata.udp_remove.str1.4
-                0x0001f054       0x18 ./lwip/src/core/udp.o
+                0x0001f04c       0x18 ./lwip/src/core/udp.o
  .rodata.mqtt_ringbuf_advance_get_idx.str1.4
-                0x0001f054       0x3d ./lwip/src/apps/mqtt/mqtt.o
+                0x0001f04c       0x3d ./lwip/src/apps/mqtt/mqtt.o
  .rodata.mqtt_output_send.str1.4
-                0x0001f054       0x1f ./lwip/src/apps/mqtt/mqtt.o
+                0x0001f04c       0x1f ./lwip/src/apps/mqtt/mqtt.o
  .rodata.mqtt_create_request.str1.4
-                0x0001f054       0x24 ./lwip/src/apps/mqtt/mqtt.o
+                0x0001f04c       0x24 ./lwip/src/apps/mqtt/mqtt.o
  .rodata.mqtt_append_request.str1.4
-                0x0001f054       0x59 ./lwip/src/apps/mqtt/mqtt.o
+                0x0001f04c       0x59 ./lwip/src/apps/mqtt/mqtt.o
  .rodata.mqtt_take_request.str1.4
-                0x0001f054       0x20 ./lwip/src/apps/mqtt/mqtt.o
+                0x0001f04c       0x20 ./lwip/src/apps/mqtt/mqtt.o
  .rodata.mqtt_request_time_elapsed.str1.4
-                0x0001f054       0x28 ./lwip/src/apps/mqtt/mqtt.o
+                0x0001f04c       0x28 ./lwip/src/apps/mqtt/mqtt.o
  .rodata.mqtt_clear_requests.str1.4
-                0x0001f054       0x22 ./lwip/src/apps/mqtt/mqtt.o
+                0x0001f04c       0x22 ./lwip/src/apps/mqtt/mqtt.o
  .rodata.mqtt_init_requests.str1.4
-                0x0001f054       0x23 ./lwip/src/apps/mqtt/mqtt.o
+                0x0001f04c       0x23 ./lwip/src/apps/mqtt/mqtt.o
  .rodata.mqtt_output_check_space.str1.4
-                0x0001f054       0x24 ./lwip/src/apps/mqtt/mqtt.o
+                0x0001f04c       0x24 ./lwip/src/apps/mqtt/mqtt.o
  .rodata.mqtt_close.str1.4
-                0x0001f054       0x1b ./lwip/src/apps/mqtt/mqtt.o
+                0x0001f04c       0x1b ./lwip/src/apps/mqtt/mqtt.o
  .rodata.mqtt_cyclic_timer.str1.4
-                0x0001f054       0x22 ./lwip/src/apps/mqtt/mqtt.o
+                0x0001f04c       0x22 ./lwip/src/apps/mqtt/mqtt.o
  .rodata.mqtt_message_received.str1.4
-                0x0001f054       0x3f ./lwip/src/apps/mqtt/mqtt.o
+                0x0001f04c       0x3f ./lwip/src/apps/mqtt/mqtt.o
  .rodata.mqtt_tcp_recv_cb.str1.4
-                0x0001f054       0x4a ./lwip/src/apps/mqtt/mqtt.o
+                0x0001f04c       0x4a ./lwip/src/apps/mqtt/mqtt.o
  .rodata.mqtt_tcp_err_cb.str1.4
-                0x0001f054       0x20 ./lwip/src/apps/mqtt/mqtt.o
+                0x0001f04c       0x20 ./lwip/src/apps/mqtt/mqtt.o
  .rodata.mqtt_publish.str1.4
-                0x0001f054       0xa4 ./lwip/src/apps/mqtt/mqtt.o
+                0x0001f04c       0xa4 ./lwip/src/apps/mqtt/mqtt.o
  .rodata.mqtt_sub_unsub.str1.4
-                0x0001f054       0xa8 ./lwip/src/apps/mqtt/mqtt.o
+                0x0001f04c       0xa8 ./lwip/src/apps/mqtt/mqtt.o
  .rodata.mqtt_set_inpub_callback.str1.4
-                0x0001f054       0x28 ./lwip/src/apps/mqtt/mqtt.o
+                0x0001f04c       0x28 ./lwip/src/apps/mqtt/mqtt.o
  .rodata.mqtt_client_connect.str1.4
-                0x0001f054      0x2e1 ./lwip/src/apps/mqtt/mqtt.o
+                0x0001f04c      0x2e1 ./lwip/src/apps/mqtt/mqtt.o
  .rodata.netconn_getaddr.str1.4
-                0x0001f054       0x62 ./lwip/src/api/api_lib.o
+                0x0001f04c       0x62 ./lwip/src/api/api_lib.o
  .rodata.netconn_gethostbyname.str1.4
-                0x0001f054       0x48 ./lwip/src/api/api_lib.o
+                0x0001f04c       0x48 ./lwip/src/api/api_lib.o
  .rodata.lwip_netconn_do_gethostbyname.str1.4
-                0x0001f054       0x25 ./lwip/src/api/api_msg.o
+                0x0001f04c       0x25 ./lwip/src/api/api_msg.o
  .rodata.tcpip_thread.str1.4
-                0x0001f054       0x1e ./lwip/src/api/tcpip.o
+                0x0001f04c       0x1e ./lwip/src/api/tcpip.o
  .rodata.tcpip_inpkt.str1.4
-                0x0001f054        0xd ./lwip/src/api/tcpip.o
+                0x0001f04c        0xd ./lwip/src/api/tcpip.o
  .rodata.tcpip_init.str1.4
-                0x0001f054       0x55 ./lwip/src/api/tcpip.o
+                0x0001f04c       0x55 ./lwip/src/api/tcpip.o
  .rodata.ethernetif_phy_init.str1.4
-                0x0001f054       0x8f ./lwip/port/enet_ethernetif.o
+                0x0001f04c       0x8f ./lwip/port/enet_ethernetif.o
  .rodata.ethernetif_input.str1.4
-                0x0001f054        0xe ./lwip/port/enet_ethernetif.o
+                0x0001f04c        0xe ./lwip/port/enet_ethernetif.o
  .rodata.ethernetif_init.str1.4
-                0x0001f054       0x45 ./lwip/port/enet_ethernetif.o
+                0x0001f04c       0x45 ./lwip/port/enet_ethernetif.o
  .rodata.ethernetif_rx_free.str1.4
-                0x0001f054       0x4b ./lwip/port/enet_ethernetif_kinetis.o
+                0x0001f04c       0x4b ./lwip/port/enet_ethernetif_kinetis.o
  .rodata.ethernetif_enet_init.str1.4
-                0x0001f054       0x1b ./lwip/port/enet_ethernetif_kinetis.o
+                0x0001f04c       0x1b ./lwip/port/enet_ethernetif_kinetis.o
  .rodata.ethernetif_rx_frame_to_pbufs.str1.4
-                0x0001f054       0xce ./lwip/port/enet_ethernetif_kinetis.o
+                0x0001f04c       0xce ./lwip/port/enet_ethernetif_kinetis.o
  .rodata.ethernetif_linkinput.str1.4
-                0x0001f054       0x18 ./lwip/port/enet_ethernetif_kinetis.o
+                0x0001f04c       0x18 ./lwip/port/enet_ethernetif_kinetis.o
  .rodata.ethernetif_linkoutput.str1.4
-                0x0001f054       0x1b ./lwip/port/enet_ethernetif_kinetis.o
+                0x0001f04c       0x1b ./lwip/port/enet_ethernetif_kinetis.o
  .rodata.enetBases.6
-                0x0001f054        0x4 ./lwip/port/enet_ethernetif_kinetis.o
+                0x0001f04c        0x4 ./lwip/port/enet_ethernetif_kinetis.o
  .rodata.enetRxIrqId.5
-                0x0001f058        0x1 ./lwip/port/enet_ethernetif_kinetis.o
- *fill*         0x0001f059        0x3 ff
+                0x0001f050        0x1 ./lwip/port/enet_ethernetif_kinetis.o
+ *fill*         0x0001f051        0x3 ff
  .rodata.enetTxIrqId.4
-                0x0001f05c        0x1 ./lwip/port/enet_ethernetif_kinetis.o
+                0x0001f054        0x1 ./lwip/port/enet_ethernetif_kinetis.o
  .rodata.sys_assert.str1.4
-                0x0001f05d        0x3 ./lwip/port/sys_arch.o
+                0x0001f055        0x3 ./lwip/port/sys_arch.o
  .rodata.sys_thread_new.str1.4
-                0x0001f05d       0x29 ./lwip/port/sys_arch.o
+                0x0001f055       0x29 ./lwip/port/sys_arch.o
  .rodata.sys_check_core_locking.str1.4
-                0x0001f05d       0x4a ./lwip/port/sys_arch.o
+                0x0001f055       0x4a ./lwip/port/sys_arch.o
  .rodata.xTimerCreateTimerTask.str1.4
-                0x0001f05d        0x8 ./freertos/freertos_kernel/timers.o
+                0x0001f055        0x8 ./freertos/freertos_kernel/timers.o
  .rodata.prvCheckForValidListAndQueue.str1.4
-                0x0001f05d        0x5 ./freertos/freertos_kernel/timers.o
+                0x0001f055        0x5 ./freertos/freertos_kernel/timers.o
  .rodata.CLOCK_GetMcgExtClkFreq.str1.4
-                0x0001f05d       0x49 ./drivers/fsl_clock.o
+                0x0001f055       0x49 ./drivers/fsl_clock.o
  .rodata.CLOCK_GetOsc0ErClkUndivFreq.str1.4
-                0x0001f05d       0x1e ./drivers/fsl_clock.o
+                0x0001f055       0x1e ./drivers/fsl_clock.o
  .rodata.CLOCK_GetOsc0ErClkDivFreq.str1.4
-                0x0001f05d       0x1e ./drivers/fsl_clock.o
+                0x0001f055       0x1e ./drivers/fsl_clock.o
  .rodata.CLOCK_GetEr32kClkFreq.str1.4
-                0x0001f05d       0x1f ./drivers/fsl_clock.o
+                0x0001f055       0x1f ./drivers/fsl_clock.o
  .rodata.CLOCK_GetPll0Freq.str1.4
-                0x0001f05d       0x1d ./drivers/fsl_clock.o
+                0x0001f055       0x1d ./drivers/fsl_clock.o
  .rodata.CLOCK_EnablePll0.str1.4
-                0x0001f05d       0x1a ./drivers/fsl_clock.o
+                0x0001f055       0x1a ./drivers/fsl_clock.o
  .rodata.CLOCK_SetPbeMode.str1.4
-                0x0001f05d       0x1a ./drivers/fsl_clock.o
+                0x0001f055       0x1a ./drivers/fsl_clock.o
  .rodata.CLOCK_BootToPeeMode.str1.4
-                0x0001f05d       0x1a ./drivers/fsl_clock.o
- *fill*         0x0001f05d        0x3 ff
+                0x0001f055       0x1a ./drivers/fsl_clock.o
+ *fill*         0x0001f055        0x3 ff
  .rodata.fllFactorTable.1
-                0x0001f060       0x10 ./drivers/fsl_clock.o
+                0x0001f058       0x10 ./drivers/fsl_clock.o
  .rodata.s_enetClock
-                0x0001f070        0x4 ./drivers/fsl_enet.o
-                0x0001f070                s_enetClock
+                0x0001f068        0x4 ./drivers/fsl_enet.o
+                0x0001f068                s_enetClock
  .rodata.ENET_GetInstance.str1.4
-                0x0001f074       0x34 ./drivers/fsl_enet.o
+                0x0001f06c       0x34 ./drivers/fsl_enet.o
  .rodata.ENET_GetDefaultConfig.str1.4
-                0x0001f074       0x20 ./drivers/fsl_enet.o
+                0x0001f06c       0x20 ./drivers/fsl_enet.o
  .rodata.ENET_Up.str1.4
-                0x0001f074       0xe0 ./drivers/fsl_enet.o
+                0x0001f06c       0xe0 ./drivers/fsl_enet.o
  .rodata.ENET_SetHandler.str1.4
-                0x0001f074       0x58 ./drivers/fsl_enet.o
+                0x0001f06c       0x58 ./drivers/fsl_enet.o
  .rodata.ENET_SetTxBufferDescriptors.str1.4
-                0x0001f074       0x46 ./drivers/fsl_enet.o
+                0x0001f06c       0x46 ./drivers/fsl_enet.o
  .rodata.ENET_SetRxBufferDescriptors.str1.4
-                0x0001f074       0x8c ./drivers/fsl_enet.o
+                0x0001f06c       0x8c ./drivers/fsl_enet.o
  .rodata.ENET_RxBufferAllocAll.str1.4
-                0x0001f074       0x6b ./drivers/fsl_enet.o
+                0x0001f06c       0x6b ./drivers/fsl_enet.o
  .rodata.ENET_RxBufferFreeAll.str1.4
-                0x0001f074       0x67 ./drivers/fsl_enet.o
+                0x0001f06c       0x67 ./drivers/fsl_enet.o
  .rodata.ENET_ActiveReadRing.str1.4
-                0x0001f074       0x64 ./drivers/fsl_enet.o
+                0x0001f06c       0x64 ./drivers/fsl_enet.o
  .rodata.ENET_ActiveSendRing.str1.4
-                0x0001f074       0x4b ./drivers/fsl_enet.o
+                0x0001f06c       0x4b ./drivers/fsl_enet.o
  .rodata.ENET_SetSMI.str1.4
-                0x0001f074       0x45 ./drivers/fsl_enet.o
+                0x0001f06c       0x45 ./drivers/fsl_enet.o
  .rodata.ENET_IncreaseIndex.str1.4
-                0x0001f074       0x1e ./drivers/fsl_enet.o
+                0x0001f06c       0x1e ./drivers/fsl_enet.o
  .rodata.ENET_SendFrame.str1.4
-                0x0001f074       0x8f ./drivers/fsl_enet.o
+                0x0001f06c       0x8f ./drivers/fsl_enet.o
  .rodata.ENET_ReclaimTxDescriptor.str1.4
-                0x0001f074       0x4b ./drivers/fsl_enet.o
+                0x0001f06c       0x4b ./drivers/fsl_enet.o
  .rodata.ENET_GetRxFrameErr.str1.4
-                0x0001f074       0x4b ./drivers/fsl_enet.o
+                0x0001f06c       0x4b ./drivers/fsl_enet.o
  .rodata.ENET_GetRxFrame.str1.4
-                0x0001f074       0xef ./drivers/fsl_enet.o
+                0x0001f06c       0xef ./drivers/fsl_enet.o
  .rodata.ENET_TransmitIRQHandler.str1.4
-                0x0001f074       0x21 ./drivers/fsl_enet.o
+                0x0001f06c       0x21 ./drivers/fsl_enet.o
  .rodata.ENET_ReceiveIRQHandler.str1.4
-                0x0001f074       0x21 ./drivers/fsl_enet.o
+                0x0001f06c       0x21 ./drivers/fsl_enet.o
  .rodata.ENET_ErrorIRQHandler.str1.4
-                0x0001f074       0x21 ./drivers/fsl_enet.o
+                0x0001f06c       0x21 ./drivers/fsl_enet.o
  .rodata.GPIO_PinInit.str1.4
-                0x0001f074       0x20 ./drivers/fsl_gpio.o
+                0x0001f06c       0x20 ./drivers/fsl_gpio.o
  .rodata.s_uartBases
-                0x0001f074       0x14 ./drivers/fsl_uart.o
+                0x0001f06c       0x14 ./drivers/fsl_uart.o
  .rodata.s_uartClock
-                0x0001f088       0x14 ./drivers/fsl_uart.o
+                0x0001f080       0x14 ./drivers/fsl_uart.o
  .rodata.UART_GetInstance.str1.4
-                0x0001f09c       0x2b ./drivers/fsl_uart.o
+                0x0001f094       0x2b ./drivers/fsl_uart.o
  .rodata.UART_Init.str1.4
-                0x0001f09c       0xfb ./drivers/fsl_uart.o
+                0x0001f094       0xfb ./drivers/fsl_uart.o
  .rodata.UART_GetDefaultConfig.str1.4
-                0x0001f09c       0x20 ./drivers/fsl_uart.o
+                0x0001f094       0x20 ./drivers/fsl_uart.o
  .rodata.s_UartAdapterBase
-                0x0001f09c       0x14 ./component/uart/fsl_adapter_uart.o
+                0x0001f094       0x14 ./component/uart/fsl_adapter_uart.o
  .rodata.HAL_UartInit.str1.4
-                0x0001f0b0       0xdd ./component/uart/fsl_adapter_uart.o
+                0x0001f0a8       0xdd ./component/uart/fsl_adapter_uart.o
  .rodata.HAL_UartSendBlocking.str1.4
-                0x0001f0b0       0x60 ./component/uart/fsl_adapter_uart.o
+                0x0001f0a8       0x60 ./component/uart/fsl_adapter_uart.o
  .rodata.mcgConfig_BOARD_BootClockRUN
-                0x0001f0b0        0xc ./board/clock_config.o
-                0x0001f0b0                mcgConfig_BOARD_BootClockRUN
+                0x0001f0a8        0xc ./board/clock_config.o
+                0x0001f0a8                mcgConfig_BOARD_BootClockRUN
  .rodata.simConfig_BOARD_BootClockRUN
-                0x0001f0bc        0x8 ./board/clock_config.o
-                0x0001f0bc                simConfig_BOARD_BootClockRUN
+                0x0001f0b4        0x8 ./board/clock_config.o
+                0x0001f0b4                simConfig_BOARD_BootClockRUN
  .rodata.oscConfig_BOARD_BootClockRUN
-                0x0001f0c4        0x8 ./board/clock_config.o
-                0x0001f0c4                oscConfig_BOARD_BootClockRUN
+                0x0001f0bc        0x8 ./board/clock_config.o
+                0x0001f0bc                oscConfig_BOARD_BootClockRUN
  .rodata.PORT_SetPinConfig.str1.4
-                0x0001f0cc       0x6d ./board/pin_mux.o
+                0x0001f0c4       0x6d ./board/pin_mux.o
  .rodata.__num_Ciob_streams
-                0x0001f0cc        0x4 C:/nxp/MCUXpressoIDE_11.10.0_3148/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.10.0.202311280810/tools/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libcr_nohost_nf.a(__ciob.o)
-                0x0001f0cc                __num_Ciob_streams
+                0x0001f0c4        0x4 C:/nxp/MCUXpressoIDE_11.10.0_3148/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.10.0.202311280810/tools/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libcr_nohost_nf.a(__ciob.o)
+                0x0001f0c4                __num_Ciob_streams
  .rodata._Csys_alloc.str1.1
-                0x0001f0d0       0x53 C:/nxp/MCUXpressoIDE_11.10.0_3148/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.10.0.202311280810/tools/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libcr_c.a(alloc.o)
+                0x0001f0c8       0x53 C:/nxp/MCUXpressoIDE_11.10.0_3148/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.10.0.202311280810/tools/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libcr_c.a(alloc.o)
                                  0x18 (size before relaxing)
  .rodata.__ctype
-                0x0001f123      0x180 C:/nxp/MCUXpressoIDE_11.10.0_3148/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.10.0.202311280810/tools/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libcr_c.a(ctype.o)
-                0x0001f123                __ctype
+                0x0001f11b      0x180 C:/nxp/MCUXpressoIDE_11.10.0_3148/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.10.0.202311280810/tools/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libcr_c.a(ctype.o)
+                0x0001f11b                __ctype
  .rodata._initio.str1.1
-                0x0001f2a3        0x4 C:/nxp/MCUXpressoIDE_11.10.0_3148/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.10.0.202311280810/tools/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libcr_c.a(initio.o)
+                0x0001f29b        0x4 C:/nxp/MCUXpressoIDE_11.10.0_3148/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.10.0.202311280810/tools/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libcr_c.a(initio.o)
  .rodata.__vfprintf.str1.1
-                0x0001f2a3       0x38 C:/nxp/MCUXpressoIDE_11.10.0_3148/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.10.0.202311280810/tools/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libcr_c.a(printf.o)
-                0x0001f2e0                        . = ALIGN (0x8)
- *fill*         0x0001f2a3        0x5 ff
+                0x0001f29b       0x38 C:/nxp/MCUXpressoIDE_11.10.0_3148/ide/plugins/com.nxp.mcuxpresso.tools.win32_11.10.0.202311280810/tools/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libcr_c.a(printf.o)
+                0x0001f2d8                        . = ALIGN (0x8)
+ *fill*         0x0001f29b        0x5 ff
 
-.glue_7         0x0001f2a8        0x0
- .glue_7        0x0001f2a8        0x0 linker stubs
+.glue_7         0x0001f2a0        0x0
+ .glue_7        0x0001f2a0        0x0 linker stubs
 
-.glue_7t        0x0001f2a8        0x0
- .glue_7t       0x0001f2a8        0x0 linker stubs
+.glue_7t        0x0001f2a0        0x0
+ .glue_7t       0x0001f2a0        0x0 linker stubs
 
-.vfp11_veneer   0x0001f2a8        0x0
- .vfp11_veneer  0x0001f2a8        0x0 linker stubs
+.vfp11_veneer   0x0001f2a0        0x0
+ .vfp11_veneer  0x0001f2a0        0x0 linker stubs
 
-.v4_bx          0x0001f2a8        0x0
- .v4_bx         0x0001f2a8        0x0 linker stubs
+.v4_bx          0x0001f2a0        0x0
+ .v4_bx         0x0001f2a0        0x0 linker stubs
 
-.iplt           0x0001f2a8        0x0
- .iplt          0x0001f2a8        0x0 ./utilities/fsl_assert.o
+.iplt           0x0001f2a0        0x0
+ .iplt          0x0001f2a0        0x0 ./utilities/fsl_assert.o
 
-.rel.dyn        0x0001f2a8        0x0
- .rel.iplt      0x0001f2a8        0x0 ./utilities/fsl_assert.o
+.rel.dyn        0x0001f2a0        0x0
+ .rel.iplt      0x0001f2a0        0x0 ./utilities/fsl_assert.o
 
 .ARM.extab
  *(SORT_BY_ALIGNMENT(.ARM.extab*) SORT_BY_ALIGNMENT(.gnu.linkonce.armextab.*))
 
-.ARM.exidx      0x0001f2a8        0x0
-                0x0001f2a8                        __exidx_start = .
+.ARM.exidx      0x0001f2a0        0x0
+                0x0001f2a0                        __exidx_start = .
  *(SORT_BY_ALIGNMENT(.ARM.exidx*) SORT_BY_ALIGNMENT(.gnu.linkonce.armexidx.*))
-                0x0001f2a8                        __exidx_end = .
-                0x0001f2a8                        _etext = .
+                0x0001f2a0                        __exidx_end = .
+                0x0001f2a0                        _etext = .
 
 .m_usb_data
  *(SORT_BY_ALIGNMENT(m_usb_bdt))
 
-.data_RAM2      0x1fff0000        0x0 load address 0x0001f2a8
+.data_RAM2      0x1fff0000        0x0 load address 0x0001f2a0
  FILL mask 0xff
                 [!provide]                        PROVIDE (__start_data_RAM2 = .)
                 [!provide]                        PROVIDE (__start_data_SRAM_LOWER = .)
@@ -17864,7 +17864,7 @@ END GROUP
                 [!provide]                        PROVIDE (__end_data_RAM2 = .)
                 [!provide]                        PROVIDE (__end_data_SRAM_LOWER = .)
 
-.data_RAM3      0x14000000        0x0 load address 0x0001f2a8
+.data_RAM3      0x14000000        0x0 load address 0x0001f2a0
  FILL mask 0xff
                 [!provide]                        PROVIDE (__start_data_RAM3 = .)
                 [!provide]                        PROVIDE (__start_data_FLEX_RAM = .)
@@ -17885,7 +17885,7 @@ END GROUP
                 0x20000000                        . = ALIGN (0x8)
                 0x20000000                        _end_uninit_RESERVED = .
 
-.data           0x20000000       0x40 load address 0x0001f2a8
+.data           0x20000000       0x40 load address 0x0001f2a0
  FILL mask 0xff
                 0x20000000                        _data = .
                 [!provide]                        PROVIDE (__start_data_RAM = .)
@@ -17924,7 +17924,7 @@ END GROUP
                 [!provide]                        PROVIDE (__end_data_RAM = .)
                 [!provide]                        PROVIDE (__end_data_SRAM_UPPER = .)
 
-.igot.plt       0x20000040        0x0 load address 0x0001f2e8
+.igot.plt       0x20000040        0x0 load address 0x0001f2e0
  .igot.plt      0x20000040        0x0 ./utilities/fsl_assert.o
 
 .bss_RAM2       0x1fff0000       0x48
@@ -18358,8 +18358,8 @@ END GROUP
                 0x2002fc18                        . = ALIGN (0x8)
                 0x20030000                        _vStackTop = (. + _StackSize)
                 0x00000000                        _image_start = LOADADDR (.text)
-                0x0001f2e8                        _image_end = (LOADADDR (.data) + SIZEOF (.data))
-                0x0001f2e8                        _image_size = (_image_end - _image_start)
+                0x0001f2e0                        _image_end = (LOADADDR (.data) + SIZEOF (.data))
+                0x0001f2e0                        _image_size = (_image_end - _image_start)
 OUTPUT(REDES_HANDS_ON_HELLO_MQTT_lwip_mqtt_freertos.axf elf32-littlearm)
 LOAD linker stubs
 

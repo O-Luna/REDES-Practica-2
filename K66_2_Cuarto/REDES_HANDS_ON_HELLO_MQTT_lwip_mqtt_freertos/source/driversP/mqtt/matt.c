@@ -79,7 +79,7 @@ static void mqtt_incoming_data_cb(void *arg, const u8_t *data, u16_t len, u8_t f
  */
 static void mqtt_subscribe_topics(mqtt_client_t *client)
 {
-    static const char *topics[] = {"lwip_topic/abuela/prueba", "lwip_other/#"};
+    static const char *topics[] = {"hoa/cuarto/prueba", "lwip_other/#"};
 //    static const char *topics[] = {"lwip_topic/Alex", "lwip_other/#"};
     int qos[]                   = {0, 1};
     err_t err;
