@@ -1,21 +1,21 @@
 #include "driversP/mqtt/mqtt.h"
 #include "driversP/GPIO/GPIO.h"
 
-
 static SemaphoreHandle_t xButtonSemaphore = NULL;
 static SemaphoreHandle_t xButtonSemaphore2 = NULL;
 static void button_task_sw3(void *arg);
 static void button_task_sw2(void *arg);
 
+
 void button_driver_init(void)
 {
-	// Crear semáforo binario
+	// Semáforo binario
 	xButtonSemaphore = xSemaphoreCreateBinary();
 	xButtonSemaphore2 = xSemaphoreCreateBinary();
-	// Crear la tarea que espera el semáforo
+	// Task que espera el semáforo
 	xTaskCreate(button_task_sw3, "ButtonTask", 256, NULL, 2, NULL);
 	xTaskCreate(button_task_sw2, "ButtonTask2", 256, NULL, 2, NULL);
-
+	//Prioridad
 	NVIC_SetPriority(PORTA_IRQn, 5);
 	NVIC_SetPriority(PORTD_IRQn, 5);
 }
@@ -25,14 +25,11 @@ static void button_task_sw3(void *arg)
 {
 	for (;;) {
 		if (xSemaphoreTake(xButtonSemaphore, portMAX_DELAY) == pdTRUE) {
-			// Aquí puedes crear la tarea que publica MQTT
 			mqtt_args_t *params = pvPortMalloc(sizeof(mqtt_args_t));
 			params->topic = "hoa/cuarto/prueba";
 			params->message = "ayuda";
 
 			sys_thread_new("publish", pre_publish, (void *)params, 512, 3);
-
-//			sys_thread_new("publish", pre_publish, NULL, 512, 3);
 		}
 	}
 }
@@ -41,7 +38,6 @@ static void button_task_sw2(void *arg)
 {
 	for (;;) {
 		if (xSemaphoreTake(xButtonSemaphore2, portMAX_DELAY) == pdTRUE) {
-			// Aquí puedes crear la tarea que publica MQTT
 			mqtt_args_t *params = pvPortMalloc(sizeof(mqtt_args_t));
 			params->topic = "hoa/cuarto/prueba";
 			params->message = "comunicar";

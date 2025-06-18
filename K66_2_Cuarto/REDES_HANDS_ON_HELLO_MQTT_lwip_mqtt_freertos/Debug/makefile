@@ -11,6 +11,7 @@ RM := rm -rf
 -include utilities/subdir.mk
 -include startup/subdir.mk
 -include source/driversP/mqtt/subdir.mk
+-include source/driversP/UART/subdir.mk
 -include source/driversP/GPIO/subdir.mk
 -include source/subdir.mk
 -include phy/subdir.mk

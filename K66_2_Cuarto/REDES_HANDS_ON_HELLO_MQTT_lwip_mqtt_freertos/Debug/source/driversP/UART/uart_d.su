@@ -1,0 +1,5 @@
+C:\Embebidosk64\WORKSPACE_REDES\REDES_HANDS_ON_HELLO_MQTT_lwip_mqtt_freertos\drivers/fsl_uart.h:653:20:UART_WriteByte	16	static
+C:\Embebidosk64\WORKSPACE_REDES\REDES_HANDS_ON_HELLO_MQTT_lwip_mqtt_freertos\drivers/fsl_uart.h:667:23:UART_ReadByte	16	static
+../source/driversP/UART/uart_d.c:14:6:uart_init	32	static
+../source/driversP/UART/uart_d.c:29:6:UART_ReadByte_NonBlocking	16	static
+../source/driversP/UART/uart_d.c:37:6:uart_listener_task	168	static

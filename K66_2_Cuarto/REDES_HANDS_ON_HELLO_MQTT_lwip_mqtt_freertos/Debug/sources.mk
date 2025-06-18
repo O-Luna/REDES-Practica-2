@@ -34,6 +34,7 @@ lwip/src/netif/ppp \
 mdio \
 phy \
 source/driversP/GPIO \
+source/driversP/UART \
 source/driversP/mqtt \
 source \
 startup \

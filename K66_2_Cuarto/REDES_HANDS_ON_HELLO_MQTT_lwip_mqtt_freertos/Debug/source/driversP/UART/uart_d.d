@@ -1,5 +1,6 @@
-source/main.o source/main.d: ../source/main.c \
- ../source/driversP/mqtt/mqtt.h \
+source/driversP/UART/uart_d.o source/driversP/UART/uart_d.d: \
+ ../source/driversP/UART/uart_d.c \
+ C:\Embebidosk64\WORKSPACE_REDES\REDES_HANDS_ON_HELLO_MQTT_lwip_mqtt_freertos\source/driversP/mqtt/mqtt.h \
  C:\Embebidosk64\WORKSPACE_REDES\REDES_HANDS_ON_HELLO_MQTT_lwip_mqtt_freertos\source/driversP/mqtt/mqtt_cfg.h \
  C:\Embebidosk64\WORKSPACE_REDES\REDES_HANDS_ON_HELLO_MQTT_lwip_mqtt_freertos\lwip\src\include/lwip/opt.h \
  C:\Embebidosk64\WORKSPACE_REDES\REDES_HANDS_ON_HELLO_MQTT_lwip_mqtt_freertos\source/lwipopts.h \
@@ -95,10 +96,13 @@ source/main.o source/main.d: ../source/main.c \
  C:\Embebidosk64\WORKSPACE_REDES\REDES_HANDS_ON_HELLO_MQTT_lwip_mqtt_freertos\mdio/fsl_enet_mdio.h \
  C:\Embebidosk64\WORKSPACE_REDES\REDES_HANDS_ON_HELLO_MQTT_lwip_mqtt_freertos\drivers/fsl_enet.h \
  C:\Embebidosk64\WORKSPACE_REDES\REDES_HANDS_ON_HELLO_MQTT_lwip_mqtt_freertos\mdio/fsl_mdio.h \
- ../source/driversP/GPIO/GPIO.h \
+ C:\Embebidosk64\WORKSPACE_REDES\REDES_HANDS_ON_HELLO_MQTT_lwip_mqtt_freertos\source/driversP/GPIO/GPIO.h \
  C:\Embebidosk64\WORKSPACE_REDES\REDES_HANDS_ON_HELLO_MQTT_lwip_mqtt_freertos\board/peripherals.h \
- ../source/driversP/UART/uart_d.h
-../source/driversP/mqtt/mqtt.h:
+ C:\Embebidosk64\WORKSPACE_REDES\REDES_HANDS_ON_HELLO_MQTT_lwip_mqtt_freertos\source/driversP/UART/uart_d.h \
+ C:\Embebidosk64\WORKSPACE_REDES\REDES_HANDS_ON_HELLO_MQTT_lwip_mqtt_freertos\source/driversP/UART/uart_d_cfg.h \
+ C:\Embebidosk64\WORKSPACE_REDES\REDES_HANDS_ON_HELLO_MQTT_lwip_mqtt_freertos\drivers/fsl_uart.h \
+ C:\Embebidosk64\WORKSPACE_REDES\REDES_HANDS_ON_HELLO_MQTT_lwip_mqtt_freertos\drivers/fsl_clock.h
+C:\Embebidosk64\WORKSPACE_REDES\REDES_HANDS_ON_HELLO_MQTT_lwip_mqtt_freertos\source/driversP/mqtt/mqtt.h:
 C:\Embebidosk64\WORKSPACE_REDES\REDES_HANDS_ON_HELLO_MQTT_lwip_mqtt_freertos\source/driversP/mqtt/mqtt_cfg.h:
 C:\Embebidosk64\WORKSPACE_REDES\REDES_HANDS_ON_HELLO_MQTT_lwip_mqtt_freertos\lwip\src\include/lwip/opt.h:
 C:\Embebidosk64\WORKSPACE_REDES\REDES_HANDS_ON_HELLO_MQTT_lwip_mqtt_freertos\source/lwipopts.h:
@@ -194,6 +198,9 @@ C:\Embebidosk64\WORKSPACE_REDES\REDES_HANDS_ON_HELLO_MQTT_lwip_mqtt_freertos\phy
 C:\Embebidosk64\WORKSPACE_REDES\REDES_HANDS_ON_HELLO_MQTT_lwip_mqtt_freertos\mdio/fsl_enet_mdio.h:
 C:\Embebidosk64\WORKSPACE_REDES\REDES_HANDS_ON_HELLO_MQTT_lwip_mqtt_freertos\drivers/fsl_enet.h:
 C:\Embebidosk64\WORKSPACE_REDES\REDES_HANDS_ON_HELLO_MQTT_lwip_mqtt_freertos\mdio/fsl_mdio.h:
-../source/driversP/GPIO/GPIO.h:
+C:\Embebidosk64\WORKSPACE_REDES\REDES_HANDS_ON_HELLO_MQTT_lwip_mqtt_freertos\source/driversP/GPIO/GPIO.h:
 C:\Embebidosk64\WORKSPACE_REDES\REDES_HANDS_ON_HELLO_MQTT_lwip_mqtt_freertos\board/peripherals.h:
-../source/driversP/UART/uart_d.h:
+C:\Embebidosk64\WORKSPACE_REDES\REDES_HANDS_ON_HELLO_MQTT_lwip_mqtt_freertos\source/driversP/UART/uart_d.h:
+C:\Embebidosk64\WORKSPACE_REDES\REDES_HANDS_ON_HELLO_MQTT_lwip_mqtt_freertos\source/driversP/UART/uart_d_cfg.h:
+C:\Embebidosk64\WORKSPACE_REDES\REDES_HANDS_ON_HELLO_MQTT_lwip_mqtt_freertos\drivers/fsl_uart.h:
+C:\Embebidosk64\WORKSPACE_REDES\REDES_HANDS_ON_HELLO_MQTT_lwip_mqtt_freertos\drivers/fsl_clock.h:

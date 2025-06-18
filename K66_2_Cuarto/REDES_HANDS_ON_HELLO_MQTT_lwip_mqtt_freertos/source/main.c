@@ -1,5 +1,6 @@
 #include "driversP/mqtt/mqtt.h"
 #include "driversP/GPIO/GPIO.h"
+#include "driversP/UART/uart_d.h"
 
 #include "stdio.h"
 #include "pin_mux.h"
@@ -17,6 +18,7 @@ int main(void)
 
     button_driver_init();
     mqtt_init();
+    uart_init();
 
     vTaskStartScheduler();
 
