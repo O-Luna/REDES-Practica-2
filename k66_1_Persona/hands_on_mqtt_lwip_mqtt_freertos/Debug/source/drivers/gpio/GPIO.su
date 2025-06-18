@@ -1,0 +1,2 @@
+../source/drivers/gpio/GPIO.c:21:6:PORTA_IRQHandler	4	static
+../source/drivers/gpio/GPIO.c:29:6:PORTD_IRQHandler	4	static
