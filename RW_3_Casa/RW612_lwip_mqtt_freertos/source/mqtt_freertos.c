@@ -168,6 +168,14 @@ static void mqtt_incoming_data_cb(void *arg, const u8_t *data, u16_t len, u8_t f
             }
         }
 
+        if (strcmp(current_topic, "hoa/Casa/Mascota") == 0)
+        {
+            if (strcmp(message, "alimentar") == 0)
+        	{
+        		PRINTF("Se ha alimentado a Guppi.\r\n");
+        	}
+        }
+        
         message_len = 0;
     }
 }
