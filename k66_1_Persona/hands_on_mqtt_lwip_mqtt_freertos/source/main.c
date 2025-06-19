@@ -203,8 +203,8 @@ static void mqtt_incoming_data_cb(void *arg, const u8_t *data, u16_t len, u8_t f
  */
 static void mqtt_subscribe_topics(mqtt_client_t *client)
 {
-    static const char *topics[] = {"hoa/Led", "hoa/#","lwip_other/#"};
-    int qos[]                   = {0,0, 1};
+    static const char *topics[] = {"hoa/Led", "hoa/#","hoa/Alarma"};
+    int qos[]                   = {0,0, 0};
     err_t err;
     int i;
 
@@ -302,23 +302,35 @@ static void mqtt_message_published_cb(void *arg, err_t err)
     }
 }
 
-/*!
- * @brief Publishes a message. To be called on tcpip_thread.
- */
 static void publish_message(void *ctx)
 {
-    static const char *topic   = "hoa/Persona/Abuela";
-    static const char *message = "presion alta";
+    static const char *topic = "hoa/Persona/Presion";
+    const char *message = NULL;
+
+    if (presion)
+    {
+        message = "presion alta";
+        presion=false;
+    }
+    else if (presion_normal)
+    {
+        message = "presion normal";
+        presion_normal=false;
+    }
+
+    if (message != NULL)
+    {
+    	PRINTF("Going to publish to the topic \"%s\"...\r\n", topic);
+        mqtt_publish(mqtt_client, topic, message, strlen(message), 1, 0, mqtt_message_published_cb, (void *)topic);
+    }
 
     LWIP_UNUSED_ARG(ctx);
-
-    PRINTF("Going to publish to the topic \"%s\"...\r\n", topic);
-
-    mqtt_publish(mqtt_client, topic, message, strlen(message), 1, 0, mqtt_message_published_cb, (void *)topic);
 }
+
+
 static void publish_message2(void *ctx)
 {
-    static const char *topic   = "hoa/Persona/Abuela";
+    static const char *topic   = "hoa/Persona/IMU";
     static const char *message = "posible caida";
 
     LWIP_UNUSED_ARG(ctx);
@@ -395,11 +407,14 @@ static void app_thread(void *arg)
     for(;;){
     	for (;;)
     	{
-    	    if (connected && presion)
-    	    {
-    	        tcpip_callback(publish_message, NULL);
-    	        presion = false;
-    	    }
+//    	    if (connected && presion)
+//    	    {
+//    	        tcpip_callback(publish_message, NULL);
+//    	        presion = false;
+//    	    }
+    		if(connected){
+    			tcpip_callback(publish_message, NULL);
+    		}
 
     	    if (connected && girosx >= 300)
     	    {
@@ -502,7 +517,7 @@ void i2c_Task(void *pvParameters) {
             //PRINTF("Valor de girosx: %d\r\n", girosx);
         }
 
-        vTaskDelay(pdMS_TO_TICKS(600));
+        vTaskDelay(pdMS_TO_TICKS(700));
     }
 }
 

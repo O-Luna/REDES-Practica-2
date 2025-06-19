@@ -15,6 +15,7 @@
 #include "fsl_debug_console.h"
 
 extern bool presion;
+extern bool presion_normal;
 
 
 

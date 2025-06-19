@@ -17,6 +17,7 @@
 
 
 bool presion=false;
+bool presion_normal=false;
 
 void PORTA_IRQHandler(void) {
     // Limpiar la bandera de interrupción del pin PTA10 = sw3
@@ -30,7 +31,7 @@ void PORTD_IRQHandler(void) {
     // Limpiar la bandera de interrupción del pin PTA10 = sw3
     if (PORTD->ISFR & (1 << 11)) {
     	PORTD->ISFR |= (1 << 11); //limpiar bandera
-    	//sw3--;
+    	presion_normal=true;
 
     }
 }
