@@ -3,11 +3,49 @@
 
 static SemaphoreHandle_t xButtonSemaphore = NULL;
 static SemaphoreHandle_t xButtonSemaphore2 = NULL;
+
+SemaphoreHandle_t xRedLedSemaphore = NULL;
+SemaphoreHandle_t xGreenLedSemaphore = NULL;
+SemaphoreHandle_t xBlueLedSemaphore= NULL;
+
 static void button_task_sw3(void *arg);
 static void button_task_sw2(void *arg);
+void red_led_toggle();
+void green_led_toggle();
+void blue_led_toggle();
 
+void leds_init(){
+		gpio_pin_config_t LED_RED_config = {
+	        .pinDirection = kGPIO_DigitalOutput,
+	        .outputLogic = 0U
+	    };
+        /* Initialize GPIO functionality on pin PTC9 (pin D7)  */
+        GPIO_PinInit(GPIOC, 9u, &LED_RED_config);
+        GPIO_PinInit(GPIOA, 11u, &LED_RED_config);
+        GPIO_PinInit(GPIOE, 6u, &LED_RED_config);
 
-void button_driver_init(void)
+        /* PORTC9 (pin D7) is configured as PTC9 */
+        //Activarlos
+        PORT_SetPinMux(PORTC, 9u, kPORT_MuxAsGpio);//rojo
+        PORT_SetPinMux(PORTA, 11u, kPORT_MuxAsGpio);//azul
+        PORT_SetPinMux(PORTE, 6u, kPORT_MuxAsGpio);//verde
+
+        //Prender / Apagar
+    	GPIO_PortToggle(GPIOC, 1u << 9u);
+    	GPIO_PortToggle(GPIOA, 1u << 11u);
+    	GPIO_PortToggle(GPIOE, 1u << 6u);
+
+    	xRedLedSemaphore = xSemaphoreCreateBinary();
+    	xGreenLedSemaphore = xSemaphoreCreateBinary();
+    	xBlueLedSemaphore = xSemaphoreCreateBinary();
+
+    	xTaskCreate(red_led_toggle, "RedLed", 256, NULL, 2, NULL);
+    	xTaskCreate(green_led_toggle, "GreenLed", 256, NULL, 2, NULL);
+    	xTaskCreate(blue_led_toggle, "BlueLed", 256, NULL, 2, NULL);
+
+}
+
+void button_driver_init()
 {
 	// Semáforo binario
 	xButtonSemaphore = xSemaphoreCreateBinary();
@@ -47,7 +85,31 @@ static void button_task_sw2(void *arg)
 	}
 }
 
+void data_received(char dato[]){
+	BaseType_t xHigherPriorityTaskWoken = pdFALSE;
 
+	if(strcmp(dato, "ayuda")== 0 ){
+		for(int i=0; i<8; i++){
+	    	xSemaphoreGiveFromISR(xRedLedSemaphore, &xHigherPriorityTaskWoken);
+	    	vTaskDelay(pdMS_TO_TICKS(200));  // Delay
+		}
+	} else if(strcmp(dato, "comunicar")== 0){
+    	xSemaphoreGiveFromISR(xGreenLedSemaphore, &xHigherPriorityTaskWoken);
+	} else if(strcmp(dato, "movimiento")== 0){
+		for(int i=0; i<8; i++){
+	    	xSemaphoreGiveFromISR(xBlueLedSemaphore, &xHigherPriorityTaskWoken);
+	    	vTaskDelay(pdMS_TO_TICKS(200));  // Delay
+		}
+	} else if(strcmp(dato, "gas")== 0){
+    	xSemaphoreGiveFromISR(xRedLedSemaphore, &xHigherPriorityTaskWoken);
+    	xSemaphoreGiveFromISR(xGreenLedSemaphore, &xHigherPriorityTaskWoken);
+	} else if(strcmp(dato, "presion")== 0){
+    	xSemaphoreGiveFromISR(xRedLedSemaphore, &xHigherPriorityTaskWoken);
+    	xSemaphoreGiveFromISR(xBlueLedSemaphore, &xHigherPriorityTaskWoken);
+	}
+
+	portYIELD_FROM_ISR(xHigherPriorityTaskWoken);
+}
 
 void PORTA_IRQHandler(void) {
     // Limpiar la bandera de interrupción del pin PTA10 = sw3
@@ -56,6 +118,7 @@ void PORTA_IRQHandler(void) {
 
     	BaseType_t xHigherPriorityTaskWoken = pdFALSE;
     	xSemaphoreGiveFromISR(xButtonSemaphore, &xHigherPriorityTaskWoken);
+//    	xSemaphoreGiveFromISR(xGreenLedSemaphore, &xHigherPriorityTaskWoken);
     	portYIELD_FROM_ISR(xHigherPriorityTaskWoken);
     }
 }
@@ -69,4 +132,34 @@ void PORTD_IRQHandler(void) {
     	xSemaphoreGiveFromISR(xButtonSemaphore2, &xHigherPriorityTaskWoken);
     	portYIELD_FROM_ISR(xHigherPriorityTaskWoken);
     }
+}
+
+void red_led_toggle()
+{
+	for (;;) {
+		if (xSemaphoreTake(xRedLedSemaphore, portMAX_DELAY) == pdTRUE) {
+			GPIO_PortToggle(GPIOC, 1u << 9u);
+//			vTaskDelay(pdMS_TO_TICKS(10));  // Delay
+		}
+	}
+}
+
+void green_led_toggle()
+{
+	for (;;) {
+		if (xSemaphoreTake(xGreenLedSemaphore, portMAX_DELAY) == pdTRUE) {
+			GPIO_PortToggle(GPIOE, 1u << 6u);
+//			vTaskDelay(pdMS_TO_TICKS(10));  // Delay
+		}
+	}
+}
+
+void blue_led_toggle()
+{
+	for (;;) {
+		if (xSemaphoreTake(xBlueLedSemaphore, portMAX_DELAY) == pdTRUE) {
+			GPIO_PortToggle(GPIOA, 1u << 11u);
+//		    vTaskDelay(pdMS_TO_TICKS(10));  // Delay
+		}
+	}
 }

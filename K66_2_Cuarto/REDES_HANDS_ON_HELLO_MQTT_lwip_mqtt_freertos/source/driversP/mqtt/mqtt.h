@@ -43,6 +43,8 @@
 
 #include "driversP/GPIO/GPIO.h"
 #include "driversP/UART/uart_d.h"
+
+#include <string.h>
 /*******************************************************************************
  * Definitions
  ******************************************************************************/
@@ -115,6 +117,7 @@ typedef struct {
 //void publish_message();
 void pre_publish(void *arg);
 void app_thread(void *arg);
+void data_received(char dato[]);
 
 extern volatile bool connected;
 

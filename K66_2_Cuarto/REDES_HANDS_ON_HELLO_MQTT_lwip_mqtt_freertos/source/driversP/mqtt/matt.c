@@ -51,6 +51,8 @@ static void mqtt_incoming_publish_cb(void *arg, const char *topic, u32_t tot_len
 static void mqtt_incoming_data_cb(void *arg, const u8_t *data, u16_t len, u8_t flags)
 {
     int i;
+    char dato[100]= "";
+//    char dato[16]= "";
 
     LWIP_UNUSED_ARG(arg);
 
@@ -64,12 +66,17 @@ static void mqtt_incoming_data_cb(void *arg, const u8_t *data, u16_t len, u8_t f
         {
             PRINTF("\\x%02x", data[i]);
         }
+
+        char letra[2]= {(char)data[i], '\0'};
+        strcat(dato, (char)data[i]);
     }
 
     if (flags & MQTT_DATA_FLAG_LAST)
     {
         PRINTF("\"\r\n");
     }
+
+    data_received(dato);
 }
 
 /*!
@@ -184,15 +191,10 @@ void mqtt_message_published_cb(void *arg, err_t err)
 //void publish_message(char *topic, char *message)
 static void publish_message(void *ctx)
 {
-//    static char *topic   = "lwip_topic/abuela/prueba";
-//    static char *message = "a";
-
-//    LWIP_UNUSED_ARG(ctx);
 	mqtt_args_t *params = (mqtt_args_t *)ctx;
 
     PRINTF("Going to publish to the topic \"%s\"...\r\n", params->topic);
 
-//    mqtt_publish(mqtt_client, topic, message, strlen(message), 1, 0, mqtt_message_published_cb, (void *)topic);
     mqtt_publish(mqtt_client, params->topic, params->message, strlen(params->message), 1, 0, mqtt_message_published_cb, (void *)params->topic);
 }
 
@@ -210,17 +212,6 @@ void pre_publish(void *arg){
 	        }
      vTaskDelete(NULL);
 }
-
-
-//void publish_message(void *arg)
-//{
-//	mqtt_params_t *params = (mqtt_params_t *)arg;
-//
-//	PRINTF("Going to publish to the topic \"%s\"...\r\n", params->topic);
-//
-//	mqtt_publish(mqtt_client, params->topic, params->message, strlen(params->message), 1, 0, mqtt_message_published_cb, (void *)params->topic);
-//}
-
 
 /*!
  * @brief Application thread.
@@ -285,22 +276,6 @@ void app_thread(void *arg)
     {
         PRINTF("Failed to obtain IP address: %d.\r\n", err);
     }
-
-    /* Publish some messages */
-//    for (i = 0; i < 5;)
-//    {
-//        if (connected)
-//        {
-//            err = tcpip_callback(publish_message, NULL);
-//            if (err != ERR_OK)
-//            {
-//                PRINTF("Failed to invoke publishing of a message on the tcpip_thread: %d.\r\n", err);
-//            }
-//            i++;
-//        }
-//
-//        sys_msleep(1000U);
-//    }
 
     vTaskDelete(NULL);
 }

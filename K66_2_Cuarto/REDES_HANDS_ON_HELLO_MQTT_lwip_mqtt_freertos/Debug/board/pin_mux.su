@@ -5,4 +5,4 @@ C:\Embebidosk64\WORKSPACE_REDES\REDES_HANDS_ON_HELLO_MQTT_lwip_mqtt_freertos\dri
 C:\Embebidosk64\WORKSPACE_REDES\REDES_HANDS_ON_HELLO_MQTT_lwip_mqtt_freertos\drivers/fsl_port.h:443:20:PORT_SetPinInterruptConfig	24	static
 ../board/pin_mux.c:37:6:BOARD_InitBootPins	8	static
 ../board/pin_mux.c:75:6:BOARD_InitPins	16	static
-../board/pin_mux.c:170:6:BOARD_InitBUTTONsPins	16	static
+../board/pin_mux.c:171:6:BOARD_InitBUTTONsPins	16	static
