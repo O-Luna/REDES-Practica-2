@@ -85,6 +85,8 @@ static ip_addr_t mqtt_addr;
 /*! @brief Indicates connection to MQTT broker. */
 static volatile bool connected = false;
 
+static char current_topic[128];
+
 /*******************************************************************************
  * Code
  ******************************************************************************/
@@ -113,6 +115,8 @@ static void mqtt_incoming_publish_cb(void *arg, const char *topic, u32_t tot_len
 {
     LWIP_UNUSED_ARG(arg);
 
+    strncpy(current_topic, topic, sizeof(current_topic) - 1);
+
     PRINTF("Received %u bytes from the topic \"%s\": \"", tot_len, topic);
 }
 
@@ -121,6 +125,8 @@ static void mqtt_incoming_publish_cb(void *arg, const char *topic, u32_t tot_len
  */
 static void mqtt_incoming_data_cb(void *arg, const u8_t *data, u16_t len, u8_t flags)
 {
+    static char message[128];
+    static size_t message_len;
     int i;
 
     LWIP_UNUSED_ARG(arg);
@@ -141,6 +147,39 @@ static void mqtt_incoming_data_cb(void *arg, const u8_t *data, u16_t len, u8_t f
     {
         PRINTF("\"\r\n");
     }
+
+    // Copia el fragmento recibido
+    if (message_len + len < sizeof(message))
+    {
+        memcpy(message + message_len, data, len);
+        message_len += len;
+    }
+
+    if (flags & MQTT_DATA_FLAG_LAST)
+    {
+        message[message_len] = '\0';
+        
+        // Detectar tópico y actuar según el mensaje
+        if (strcmp(current_topic, "hoa/Casa/Candado") == 0)
+        {
+        	if (strcmp(message, "abierto") == 0)
+            {
+                PRINTF("Candado ABIERTO\r\n");
+                GPIO_PortToggle(GPIO, 0U, 1u << 1U);
+                GPIO_PortToggle(GPIO, 0U, 1u << 12U);
+
+            }
+            else if (strcmp(message, "cerrado") == 0)
+            {
+                PRINTF("Candado CERRADOF\r\n");
+                GPIO_PortToggle(GPIO, 0U, 1u << 1U);
+                GPIO_PortToggle(GPIO, 0U, 1u << 12U);
+
+            }
+        }
+
+        message_len = 0;
+    }
 }
 
 /*!
@@ -148,7 +187,7 @@ static void mqtt_incoming_data_cb(void *arg, const u8_t *data, u16_t len, u8_t f
  */
 static void mqtt_subscribe_topics(mqtt_client_t *client)
 {
-    static const char *topics[] = {"hoa/#};
+    static const char *topics[] = {"hoa/#", "hoa/Casa/Candado"};
     int qos[]                   = {0, 1};
     err_t err;
     int i;
@@ -252,10 +291,18 @@ static void mqtt_message_published_cb(void *arg, err_t err)
  */
 static void publish_movement(void *ctx)
 {
-    static const char *topic   = "hoa/casa/movimiento";
-    static const char *message = "nadie";
+    static const char *topic   = "hoa/Casa/Movimiento";
+    static const char *message;
+    static uint8_t counter = 0;
 
     LWIP_UNUSED_ARG(ctx);
+
+    if ((counter % 10) == 0)
+    	message = "alguien";
+    else
+    	message = "nadie";
+
+    counter++;
 
     PRINTF("Going to publish to the topic \"%s\"...\r\n", topic);
 
@@ -264,10 +311,18 @@ static void publish_movement(void *ctx)
 
 static void publish_smoke(void *ctx)
 {
-    static const char *topic   = "hoa/casa/humo";
-    static const char *message = "0";
+    static const char *topic   = "hoa/Casa/Humo";
+    static const char *message;
+    static uint8_t counter = 0;
 
     LWIP_UNUSED_ARG(ctx);
+
+    if ((counter % 5) == 0)
+    	message = "1";
+    else
+    	message = "0";
+
+    counter++;
 
     PRINTF("Going to publish to the topic \"%s\"...\r\n", topic);
 
@@ -281,7 +336,6 @@ static void app_thread(void *arg)
 {
     struct netif *netif = (struct netif *)arg;
     err_t err;
-    err_t err2;
     int i;
 
     PRINTF("\r\nIPv4 Address     : %s\r\n", ipaddr_ntoa(&netif->ip_addr));
@@ -320,21 +374,12 @@ static void app_thread(void *arg)
     }
 
     /* Publish some messages */
-    for (i = 0; i < 5;)
+    while (1)
     {
         if (connected)
         {
-            err = tcpip_callback(publish_movement, NULL);
-            if (err != ERR_OK)
-            {
-                PRINTF("Failed to invoke publishing of a message on the tcpip_thread: %d.\r\n", err);
-            }
-            err2 = tcpip_callback(publish_smoke, NULL);
-            if (err2 != ERR_OK)
-            {
-                PRINTF("Failed to invoke publishing of a message on the tcpip_thread: %d.\r\n", err);
-            }
-            i++;
+            tcpip_callback(publish_movement, NULL);
+            tcpip_callback(publish_smoke, NULL);
         }
 
         sys_msleep(1000U);
