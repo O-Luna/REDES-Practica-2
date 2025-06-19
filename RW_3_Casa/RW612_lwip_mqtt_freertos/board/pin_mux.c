@@ -33,6 +33,11 @@ void BOARD_InitPins(void) {                                /*!< Function assigne
    IO_MUX_SetPinMux(IO_MUX_ENET_MDIO);
    IO_MUX_SetPinMux(IO_MUX_GPIO21);
    IO_MUX_SetPinMux(IO_MUX_GPIO55);
+
+   IO_MUX_SetPinMux(IO_MUX_GPIO0);
+   IO_MUX_SetPinMux(IO_MUX_GPIO1);
+   IO_MUX_SetPinMux(IO_MUX_GPIO11);
+   IO_MUX_SetPinMux(IO_MUX_GPIO12);
 }
 
 /***********************************************************************************************************************
