@@ -6,8 +6,8 @@ C:\Embebidosk64\WORKSPACE_REDES\REDES_HANDS_ON_HELLO_MQTT_lwip_mqtt_freertos\dri
 ../source/driversP/GPIO/GPIO.c:62:13:button_task_sw3	32	static
 ../source/driversP/GPIO/GPIO.c:75:13:button_task_sw2	32	static
 ../source/driversP/GPIO/GPIO.c:88:6:data_received	32	static
-../source/driversP/GPIO/GPIO.c:114:6:PORTA_IRQHandler	16	static
-../source/driversP/GPIO/GPIO.c:126:6:PORTD_IRQHandler	16	static
-../source/driversP/GPIO/GPIO.c:137:6:red_led_toggle	8	static
-../source/driversP/GPIO/GPIO.c:147:6:green_led_toggle	8	static
-../source/driversP/GPIO/GPIO.c:157:6:blue_led_toggle	8	static
+../source/driversP/GPIO/GPIO.c:112:6:PORTA_IRQHandler	16	static
+../source/driversP/GPIO/GPIO.c:124:6:PORTD_IRQHandler	16	static
+../source/driversP/GPIO/GPIO.c:135:6:red_led_toggle	8	static
+../source/driversP/GPIO/GPIO.c:145:6:green_led_toggle	8	static
+../source/driversP/GPIO/GPIO.c:155:6:blue_led_toggle	8	static

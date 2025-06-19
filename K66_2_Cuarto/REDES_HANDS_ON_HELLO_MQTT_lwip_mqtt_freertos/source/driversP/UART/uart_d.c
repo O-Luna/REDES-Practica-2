@@ -43,7 +43,7 @@ void uart_listener_task(void *pvParameters) {
                     // reservar memoria para los parámetros
                     mqtt_args_t *params = pvPortMalloc(sizeof(mqtt_args_t));
                     if (params != NULL) {
-                        params->topic = "hoa/cuarto/prueba";
+                        params->topic = "hoa/cuarto/comunicacion";
 
                         // reservar memoria para el mensaje
                         char *msg = pvPortMalloc(strlen(uart_buffer) + 1);

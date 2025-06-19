@@ -31,11 +31,11 @@ int main(void)
 
 
     button_driver_init();
-//    mqtt_init();
+    mqtt_init();
     uart_init();
     leds_init();
 
-	xTaskCreate(prueba, "Prueba", 256, NULL, 2, NULL);
+//	xTaskCreate(prueba, "Prueba", 256, NULL, 2, NULL);
 
     vTaskStartScheduler();
 

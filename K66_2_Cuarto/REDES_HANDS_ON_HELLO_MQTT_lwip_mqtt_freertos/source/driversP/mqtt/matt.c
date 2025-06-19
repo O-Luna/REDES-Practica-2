@@ -67,8 +67,8 @@ static void mqtt_incoming_data_cb(void *arg, const u8_t *data, u16_t len, u8_t f
             PRINTF("\\x%02x", data[i]);
         }
 
-        char letra[2]= {(char)data[i], '\0'};
-        strcat(dato, (char)data[i]);
+        char letra[2]= {data[i], '\0'};
+        strcat(dato, letra);
     }
 
     if (flags & MQTT_DATA_FLAG_LAST)
@@ -84,9 +84,14 @@ static void mqtt_incoming_data_cb(void *arg, const u8_t *data, u16_t len, u8_t f
  */
 static void mqtt_subscribe_topics(mqtt_client_t *client)
 {
-    static const char *topics[] = {"hoa/cuarto/prueba", "lwip_other/#"};
-//    static const char *topics[] = {"lwip_topic/Alex", "lwip_other/#"};
-    int qos[]                   = {0, 1};
+    static const char *topics[] = { "hoa/cuarto/comunicacion_a",
+    								"hoa/Persona/IMU",
+									"hoa/Persona/Presion",
+									"hoa/Casa/Movimiento",
+									"hoa/Casa/Humo"
+    								};
+
+    int qos[]                   = {0, 0, 0, 0, 0};
     err_t err;
     int i;
 
@@ -176,7 +181,8 @@ void mqtt_message_published_cb(void *arg, err_t err)
 
     if (err == ERR_OK)
     {
-        PRINTF("Published to the topic \"%s\".\r\n", topic);
+        //PRINTF("Published to the topic \"%s\".\r\n", topic);
+    	PRINTF("\n");
     }
     else
     {
@@ -193,7 +199,7 @@ static void publish_message(void *ctx)
 {
 	mqtt_args_t *params = (mqtt_args_t *)ctx;
 
-    PRINTF("Going to publish to the topic \"%s\"...\r\n", params->topic);
+    //PRINTF("Going to publish to the topic \"%s\"...\r\n", params->topic);
 
     mqtt_publish(mqtt_client, params->topic, params->message, strlen(params->message), 1, 0, mqtt_message_published_cb, (void *)params->topic);
 }

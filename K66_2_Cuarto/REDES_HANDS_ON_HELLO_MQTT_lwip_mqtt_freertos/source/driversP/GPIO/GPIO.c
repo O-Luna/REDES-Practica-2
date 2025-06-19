@@ -64,7 +64,7 @@ static void button_task_sw3(void *arg)
 	for (;;) {
 		if (xSemaphoreTake(xButtonSemaphore, portMAX_DELAY) == pdTRUE) {
 			mqtt_args_t *params = pvPortMalloc(sizeof(mqtt_args_t));
-			params->topic = "hoa/cuarto/prueba";
+			params->topic = "hoa/cuarto/boton";
 			params->message = "ayuda";
 
 			sys_thread_new("publish", pre_publish, (void *)params, 512, 3);
@@ -77,7 +77,7 @@ static void button_task_sw2(void *arg)
 	for (;;) {
 		if (xSemaphoreTake(xButtonSemaphore2, portMAX_DELAY) == pdTRUE) {
 			mqtt_args_t *params = pvPortMalloc(sizeof(mqtt_args_t));
-			params->topic = "hoa/cuarto/prueba";
+			params->topic = "hoa/cuarto/boton";
 			params->message = "comunicar";
 
 			sys_thread_new("publish", pre_publish, (void *)params, 512, 3);
@@ -88,24 +88,22 @@ static void button_task_sw2(void *arg)
 void data_received(char dato[]){
 	BaseType_t xHigherPriorityTaskWoken = pdFALSE;
 
-	if(strcmp(dato, "ayuda")== 0 ){
-		for(int i=0; i<8; i++){
+	if(strcmp(dato, "1")== 0 ){ //humo
+		for(int i=0; i<4; i++){
 	    	xSemaphoreGiveFromISR(xRedLedSemaphore, &xHigherPriorityTaskWoken);
 	    	vTaskDelay(pdMS_TO_TICKS(200));  // Delay
 		}
-	} else if(strcmp(dato, "comunicar")== 0){
-    	xSemaphoreGiveFromISR(xGreenLedSemaphore, &xHigherPriorityTaskWoken);
-	} else if(strcmp(dato, "movimiento")== 0){
-		for(int i=0; i<8; i++){
+	} else if(strcmp(dato, "alguien")== 0){
+		for(int i=0; i<4; i++){
 	    	xSemaphoreGiveFromISR(xBlueLedSemaphore, &xHigherPriorityTaskWoken);
 	    	vTaskDelay(pdMS_TO_TICKS(200));  // Delay
 		}
-	} else if(strcmp(dato, "gas")== 0){
-    	xSemaphoreGiveFromISR(xRedLedSemaphore, &xHigherPriorityTaskWoken);
-    	xSemaphoreGiveFromISR(xGreenLedSemaphore, &xHigherPriorityTaskWoken);
-	} else if(strcmp(dato, "presion")== 0){
+	} else if(strcmp(dato, "presion alta")== 0 || strcmp(dato, "presion normal")== 0){
     	xSemaphoreGiveFromISR(xRedLedSemaphore, &xHigherPriorityTaskWoken);
     	xSemaphoreGiveFromISR(xBlueLedSemaphore, &xHigherPriorityTaskWoken);
+
+	}else if(strcmp(dato, "posible caida")== 0){
+		PRINTF("Se llamara a la ambulancia \r\n");
 	}
 
 	portYIELD_FROM_ISR(xHigherPriorityTaskWoken);

@@ -1198,7 +1198,7 @@ mqtt_sub_unsub(mqtt_client_t *client, const char *topic, u8_t qos, mqtt_request_
   LWIP_ERROR("mqtt_sub_unsub: total length overflow", (total_len <= 0xFFFF), return ERR_ARG);
   remaining_length = (u16_t)total_len;
 
-  LWIP_ASSERT("mqtt_sub_unsub: qos < 3", qos < 3);
+  LWIP_ASSERT("mqtt_sub_unsub: qos < 9", qos < 9); //<3
   if (client->conn_state == TCP_DISCONNECTED) {
     LWIP_DEBUGF(MQTT_DEBUG_WARN, ("mqtt_sub_unsub: Can not (un)subscribe in disconnected state\n"));
     return ERR_CONN;
