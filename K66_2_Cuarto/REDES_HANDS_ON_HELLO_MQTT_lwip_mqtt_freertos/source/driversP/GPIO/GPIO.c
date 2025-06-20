@@ -14,6 +14,11 @@ void red_led_toggle();
 void green_led_toggle();
 void blue_led_toggle();
 
+void off_red();
+void off_blue();
+void on_red();
+void on_blue();
+
 void leds_init(){
 		gpio_pin_config_t LED_RED_config = {
 	        .pinDirection = kGPIO_DigitalOutput,
@@ -88,22 +93,25 @@ static void button_task_sw2(void *arg)
 void data_received(char dato[]){
 	BaseType_t xHigherPriorityTaskWoken = pdFALSE;
 
-	if(strcmp(dato, "1")== 0 ){ //humo
-		for(int i=0; i<4; i++){
-	    	xSemaphoreGiveFromISR(xRedLedSemaphore, &xHigherPriorityTaskWoken);
-	    	vTaskDelay(pdMS_TO_TICKS(200));  // Delay
-		}
+	if(strcmp(dato, "presion normal")== 0 ){ //humo
+		off_red();
+//		off_blue();
 	} else if(strcmp(dato, "alguien")== 0){
+//		PRINTF("Movimiento en la puerta \r\n");
 		for(int i=0; i<4; i++){
 	    	xSemaphoreGiveFromISR(xBlueLedSemaphore, &xHigherPriorityTaskWoken);
 	    	vTaskDelay(pdMS_TO_TICKS(200));  // Delay
 		}
-	} else if(strcmp(dato, "presion alta")== 0 || strcmp(dato, "presion normal")== 0){
-    	xSemaphoreGiveFromISR(xRedLedSemaphore, &xHigherPriorityTaskWoken);
-    	xSemaphoreGiveFromISR(xBlueLedSemaphore, &xHigherPriorityTaskWoken);
+	} else if(strcmp(dato, "presion alta")== 0){
+//    	xSemaphoreGiveFromISR(xRedLedSemaphore, &xHigherPriorityTaskWoken);
+//    	xSemaphoreGiveFromISR(xBlueLedSemaphore, &xHigherPriorityTaskWoken);
+		on_red();
+//		on_blue();
 
 	}else if(strcmp(dato, "posible caida")== 0){
 		PRINTF("Se llamara a la ambulancia \r\n");
+	} else{
+		PRINTF("%c \r\n", dato);
 	}
 
 	portYIELD_FROM_ISR(xHigherPriorityTaskWoken);
@@ -161,3 +169,20 @@ void blue_led_toggle()
 		}
 	}
 }
+
+void on_red(){
+	GPIOC->PCOR = (1u << 9u);
+}
+
+void off_red(){
+	GPIOC->PSOR = (1u << 9u);
+}
+
+void on_blue(){
+	GPIOA->PCOR = (1u << 11u);
+}
+
+void off_blue(){
+	GPIOA->PSOR = (1u << 11u);
+}
+

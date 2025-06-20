@@ -87,8 +87,7 @@ static void mqtt_subscribe_topics(mqtt_client_t *client)
     static const char *topics[] = { "hoa/cuarto/comunicacion_a",
     								"hoa/Persona/IMU",
 									"hoa/Persona/Presion",
-									"hoa/Casa/Movimiento",
-									"hoa/Casa/Humo"
+									"hoa/Casa/Movimiento"
     								};
 
     int qos[]                   = {0, 0, 0, 0, 0};
